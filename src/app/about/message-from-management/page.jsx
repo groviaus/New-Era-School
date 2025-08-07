@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
+import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
+import { Button } from "../../../components/ui/button";
+import Heading from "../../../components/Heading";
 import { MessageCircle, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import {

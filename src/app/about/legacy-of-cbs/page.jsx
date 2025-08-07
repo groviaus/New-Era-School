@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState,useEffect } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
+import React, { useState } from "react";
+import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 import PropTypes from "prop-types";
-import { Button } from "../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 
 function ShapeOne() {
@@ -171,11 +171,12 @@ const FeatureItem = ({ feature, index, isExpanded, onToggle }) => (
         "md:order-2": index % 2,
       })}
     >
-      <div className="relative z-20 p-0 overflow-hidden">
+      <div className="relative h-full w-full z-20 p-0 overflow-hidden">
         <Image
           src={feature.img}
           alt={feature.title}
           fill
+
           className="object-cover transition-all duration-300 hover:scale-110 -z-10"
         />
       </div>

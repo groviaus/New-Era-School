@@ -1,4 +1,4 @@
-import seoMetadata from "../data/imm_seo_metadata.json";
+import seoMetadata from "../data/cbs_seo_metadata.json";
 
 export function findMetadataByPath(path) {
   // Remove trailing slash if present
@@ -11,16 +11,16 @@ export function findMetadataByPath(path) {
     return {
       title: metadata.title,
       description: metadata.description,
-      canonical: `https://immindia.edu.in${metadata.canonical}`,
+      canonical: `https://www.colbrownschool.com${metadata.canonical}`,
     };
   }
 
   // If no exact match, return default metadata
   return {
-    title: "Best MBA Colleges in Delhi NCR | PGDM Colleges in India | IMM ",
+    title: "Best Boarding School In Dehradun For Boys | Residential School",
     description:
-      "Institute of Marketing & Management (IMM) is a top-ranked MBA college in Delhi. Industry-focused curriculum, excellent placements, and strong alumni network.",
-    canonical: `https://immindia.edu.in${cleanPath}`,
+      "Looking for a Boarding School For Boys In India? Col Brown School is a Top Boarding Schools in Dehradun, Uttarakhand, and specializes in boarding education!",
+    canonical: `https://www.colbrownschool.com${cleanPath}`,
   };
 }
 
@@ -31,13 +31,13 @@ export function generateMetadataForPath(path) {
     title: metadata.title,
     description: metadata.description,
     keywords:
-      "IMM, Institute of Marketing & Management, MBA colleges in Delhi, PGDM colleges in India, business school",
+      "education, school, CBS, learning, boarding school, residential school, boys school, Dehradun schools, Col Brown School",
     openGraph: {
       title: metadata.title,
       description: metadata.description,
       type: "website",
       url: metadata.canonical,
-      siteName: "IMM - Institute of Marketing & Management",
+      siteName: "Col Brown School",
     },
     twitter: {
       card: "summary_large_image",

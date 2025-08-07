@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import Heading from "../../components/Heading";
-import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
-import { cn } from "../../lib/utils";
+import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
+import Heading from "../../../components/Heading";
+import { ArrowRight } from "lucide-react";
+import { cn } from "../../../lib/utils";
 import PropTypes from "prop-types";
-import { Button } from "../../components/ui/button";
+
 import Image from "next/image";
 
 const Achievements = () => {
@@ -87,7 +87,7 @@ const FeatureItem = ({ feature, index, isExpanded, onToggle }) => (
         "md:order-2": index % 2,
       })}
     >
-      <div className="relative z-20 p-0 overflow-hidden max-h-[500px]">
+      <div className="relative h-full w-full z-20 p-0 overflow-hidden max-h-[500px]">
         <Image
           src={feature.img}
           alt={feature.title}

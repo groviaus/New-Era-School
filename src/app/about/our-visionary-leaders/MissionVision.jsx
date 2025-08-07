@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
+// import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
+import { Button } from "../../../components/ui/button";
+import Heading from "../../../components/Heading";
 import { MessageCircle, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -22,19 +22,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 // import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 const MissionVision = () => {
-  // const breadcrumbItems = [
-  //   { href: "/", label: "Home" },
-  //   { href: "/about/mission-vision", label: "About" },
-  //   { label: "Mission Vision" },
-  // ];
+  
   return (
     <section>
-      <ImgAndBreadcrumb
-        title="Mission Vision"
-        imageSrc="/assets/about/message-banner.jpg"
-        imageAlt="Description of the image"
-        breadcrumbItems={breadcrumbItems}
-      />
+      
       {/* <Container> */}
       {/* <Heading
             title="Our Mission and Vision"

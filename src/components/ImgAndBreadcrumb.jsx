@@ -10,7 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 import {
@@ -64,7 +64,7 @@ const ImgAndBreadcrumb = ({
                   <>
                     <BreadcrumbLink asChild className="">
                       <Link
-                        to={item.href}
+                        href={item.href}
                         className="text-base font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 "
                       >
                         {item.label}
@@ -90,7 +90,7 @@ const ImgAndBreadcrumb = ({
                 <BreadcrumbItem className="text-white mobile-breadcrumb-item">
                   <BreadcrumbLink asChild className="text-white">
                     <Link
-                      to={breadcrumbItems[0].href}
+                      href={breadcrumbItems[0].href}
                       className="font-semibold text-white transition-colors duration-100 ease-in-out  hover:text-slate-100"
                     >
                       {breadcrumbItems[0].label}
@@ -117,7 +117,7 @@ const ImgAndBreadcrumb = ({
                           {breadcrumbItems.slice(1, -2).map((item, index) => (
                             <Link
                               key={index}
-                              to={item.href ? item.href : "#"}
+                              href={item.href ? item.href : "#"}
                               className="py-1 text-sm text-white"
                             >
                               {item.label}
@@ -135,21 +135,23 @@ const ImgAndBreadcrumb = ({
                 </>
               )}
               {breadcrumbItems.slice(1).map((item, index) => (
-                <BreadcrumbItem key={index} className="text-white">
+                <>
                   <BreadcrumbSeparator />
-                  {item.href ? (
-                    <BreadcrumbLink
-                      asChild
-                      className="text-white truncate max-w-20 md:max-w-none"
-                    >
-                      <Link to={item.href}>{item.label}</Link>
-                    </BreadcrumbLink>
-                  ) : (
-                    <BreadcrumbPage className="text-white truncate max-w-20 md:max-w-none">
-                      {item.label}
-                    </BreadcrumbPage>
-                  )}
-                </BreadcrumbItem>
+                  <BreadcrumbItem key={index} className="text-white">
+                    {item.href ? (
+                      <BreadcrumbLink
+                        asChild
+                        className="text-white truncate max-w-20 md:max-w-none"
+                      >
+                        <Link href={item.href}>{item.label}</Link>
+                      </BreadcrumbLink>
+                    ) : (
+                      <BreadcrumbPage className="text-white truncate max-w-20 md:max-w-none">
+                        {item.label}
+                      </BreadcrumbPage>
+                    )}
+                  </BreadcrumbItem>
+                </>
               ))}
             </>
           )}

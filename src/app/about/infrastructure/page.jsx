@@ -1,280 +1,24 @@
 "use client";
 
-import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
-import { MessageCircle, ChevronRight } from "lucide-react";
+import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
+import Heading from "../../../components/Heading";
+
+import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const infrastructureData = [
-  {
-    id: 1,
-    section: {
-      title: "Academic Facilities",
-      subtitle: "State-of-the-art learning environments",
-      achievements: [
-        {
-          title: "Spacious Classrooms",
-          description:
-            "Our classrooms are spacious, well-ventilated, and equipped with smart technology to enhance learning.",
-        },
-        {
-          title: "State-of-the-Art Library",
-          description:
-            "The school boasts a state-of-the-art library, rich in resources, to nurture a love for reading and research.",
-        },
-        {
-          title: "Dedicated Science Labs",
-          description:
-            "Dedicated science and computer labs are equipped with advanced tools, fostering curiosity and practical learning.",
-        },
-        {
-          title: "Study Areas",
-          description: "Quiet study spaces and group discussion rooms.",
-        },
-      ],
-      imageSrc: "/assets/academics/Classroom-Banner.webp",
-      imageAlt: "Col Brown School Library",
-    },
+const classrooom = "/assets/academics/Classroom-Banner.webp";
+const medical = "/assets/boarding-life/medical2.webp";
+const hostel = "/assets/boarding-life/Hostel-Banner.webp";
+const library = "/assets/boarding-life/Library-Banner.webp";
+const dining = "/assets/boarding-life/Dinning (3).webp";
+const Athlete = "/assets/beyond-classroom/Athlete.webp";
+const softSkills1 =
+  "/assets/beyond-classroom/clubs/soft-skills/soft-skills (1).webp";
 
-    link: "/boarding-life/classrooms",
-  },
-  {
-    id: 2,
-    section: {
-      title: "Sports and Recreation",
-      subtitle: "Integral to our philosophy of all-around development",
-      achievements: [
-        {
-          title: "Expansive Playgrounds",
-          description:
-            "We provide expansive playgrounds, courts, and facilities for games like hockey, football, basketball, cricket, karate, army drill & athletics.",
-        },
-        {
-          title: "Indoor Game Areas",
-          description:
-            "Indoor game areas and a swimming pool cater to recreational and competitive activities.",
-        },
-        {
-          title: "Fitness Center",
-          description:
-            "Our students engage in thrilling outdoor activities like paragliding, rock climbing, and trekking - combining adventure with nature exploration.",
-        },
-        {
-          title: "Counseling Center",
-          description: "Professional support for emotional well-being.",
-        },
-      ],
-      imageSrc: "/assets/beyond-classroom/Athlete.webp",
-      imageAlt: "Col Brown School Sports Complex",
-    },
-    link: "/boarding-life/sports-at-cbs",
-  },
-  {
-    id: 3,
-    section: {
-      title: "Hostel and Residential Facilities",
-      subtitle: "Home-away-from-home experience",
-      achievements: [
-        {
-          title: "Comfortable Dormitories",
-          description:
-            "Our boarding facilities ensure a home-away-from-home experience.",
-        },
-        {
-          title: "Clean Dining Hall",
-          description:
-            "Comfortable dormitories, clean dining hall, and well-balanced meals contribute to the well-being of every student.",
-        },
-        {
-          title: "Laundry Services",
-          description:
-            "Professional laundry and maintenance services available.",
-        },
-        {
-          title: "Common Rooms",
-          description:
-            "Spacious common areas for recreation and social interaction.",
-        },
-      ],
-      imageSrc: "/assets/boarding-life/Hostel-Banner.webp",
-      imageAlt: "Col Brown School Dormitory",
-    },
-    link: "/boarding-life/hostel",
-  },
-  {
-    id: 4,
-    section: {
-      title: "Cultural and Creative Spaces",
-      subtitle: "Encouraging exploration of arts",
-      achievements: [
-        {
-          title: "Tamarind Theatre",
-          description:
-            "The Tamarind Theatre serves as a creative hub, encouraging students to explore performing and visual arts.",
-        },
-        {
-          title: "Music Rooms",
-          description: "Dedicated spaces for music education and practice.",
-        },
-        {
-          title: "Art Studios",
-          description:
-            "Art studios that inspire creativity and artistic expression.",
-        },
-        {
-          title: "Innovation Hub",
-          description: "Space for projects and experimental learning.",
-        },
-      ],
-      imageSrc:
-        "/assets/beyond-classroom/clubs/soft-skills/soft-skills (1).webp",
-      imageAlt: "Col Brown School Cultural Spaces",
-    },
-    link: "/beyond-classroom/clubs-at-cbs",
-  },
-  {
-    id: 5,
-    section: {
-      title: "Library & Resource Center",
-      subtitle: "A treasure trove of knowledge",
-      achievements: [
-        {
-          title: "Extensive Collection",
-          description:
-            "Our library has lots of books for everyone - from textbooks and study materials to storybooks and magazines.",
-        },
-        {
-          title: "Quiet Study Areas",
-          description: "Quiet study areas for students to read and study.",
-        },
-
-        {
-          title: "Research Materials",
-          description:
-            "We have many books and magazines for students to learn more about the world.",
-        },
-        {
-          title: "E-Books and Digital Resources",
-          description:
-            "Along with regular books, we offer e-books, online articles, and digital resources to support today's learning needs.",
-        },
-      ],
-      imageSrc: "/assets/boarding-life/Library-Banner.webp",
-      imageAlt: "Col Brown School Cultural Spaces",
-    },
-    link: "/boarding-life/library",
-  },
-  {
-    id: 6,
-    section: {
-      title: "Dining Hall",
-      subtitle: "A culinary delight for every palate",
-      achievements: [
-        {
-          title: "Clean Dining Hall",
-          description:
-            "Our dining hall is meticulously maintained, providing a hygienic and welcoming environment for students to enjoy their meals.",
-        },
-        {
-          title: "Nourishing Excellence",
-          description:
-            "Our dining hall offers a diverse menu crafted by nutritionists, ensuring every meal supports our students' academic and athletic performance.",
-        },
-        {
-          title: "Comfortable Dining Space",
-          description:
-            "Our dining hall is a cozy place where students can relax and enjoy their meals together.",
-        },
-        {
-          title: "Healthy Food Options",
-          description:
-            "We provide healthy food choices that help students stay active and focused in their studies.",
-        },
-      ],
-      imageSrc: "/assets/boarding-life/Dinning (3).webp",
-      imageAlt: "Col Brown School Cultural Spaces",
-    },
-
-    link: "/boarding-life/dining",
-  },
-  {
-    id: 7,
-    section: {
-      title: "Medical Facilities",
-      subtitle: "Your health is our priority",
-      achievements: [
-        {
-          title: "24/7 Medical Facility",
-          description:
-            "Our on-campus medical facility ensures 24/7 healthcare support with experienced medical professionals, prioritizing student wellbeing.",
-        },
-        {
-          title: "Emergency Response Team",
-          description: "A dedicated team ready to respond to emergencies.",
-        },
-        {
-          title: "First Aid Training",
-          description: "Regular first aid training for students and staff.",
-        },
-        {
-          title: "Regular Health Checks",
-          description: "Regular health checks for students and staff.",
-        },
-      ],
-      imageSrc: "/assets/boarding-life/medical2.webp",
-      imageAlt: "Col Brown School Cultural Spaces",
-    },
-    link: "/boarding-life/medical-facilities",
-  },
-];
-
-const Infrastructure = () => {
-  const breadcrumbItems = [
-    { href: "/", label: "Home" },
-    { href: "/about/infrastructure", label: "About" },
-    { label: "Infrastructure" },
-  ];
-  return (
-    <section className="overflow-x-hidden">
-      <ImgAndBreadcrumb
-        title="Infrastructure"
-        imageSrc="/assets/about/infrastructure-banner.webp"
-        imageAlt="Description of the image"
-        breadcrumbItems={breadcrumbItems}
-      />
-      <section className="bg-gray-100">
-        <Container>
-          {/* <Heading
-            title="Our Infrastructure"
-            titleClassName="text-green-950 lg:text-5xl text-3xl font-bold"
-            subtitle="A century of excellence in education with world-class facilities"
-            subtitleClassName="text-gray-700"
-            className="pt-12 mx-auto"
-          /> */}
-          <div className="grid grid-cols-1 gap-10 sm:gap-5 pt-12">
-            {infrastructureData.map((item) => (
-              <InfrastructureSection
-                key={item.id}
-                {...item.section}
-                id={item.id}
-                link={item.link}
-              />
-            ))}
-          </div>
-        </Container>
-      </section>
-    </section>
-  );
-};
-
-export default Infrastructure;
-
-const InfrastructureSection = ({
+function InfrastructureSection({
   title,
   subtitle,
   achievements,
@@ -282,7 +26,7 @@ const InfrastructureSection = ({
   imageAlt,
   id,
   link,
-}) => {
+}) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -310,9 +54,6 @@ const InfrastructureSection = ({
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-col items-center justify-center sm:justify-start gap-4 lg:items-start"
               >
-                {/* <h6 className="text-base font-normal leading-relaxed text-gray-400">
-                    Our Infrastructure
-                    </h6> */}
                 <div className="flex flex-col items-center justify-start w-full gap-3 lg:items-start">
                   <h2 className="text-3xl sm:text-4xl font-bold leading-normal text-center text-green-800 font-manrope lg:text-start">
                     {title}
@@ -366,18 +107,18 @@ const InfrastructureSection = ({
               </div>
             </div>
             <Link href={link} onClick={() => window.scrollTo(0, 0)}>
-              <motion.button
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="sm:w-fit w-full group px-3.5 py-2 bg-green-50 hover:bg-green-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex"
+                className="sm:w-fit w-full group px-3.5 py-2 bg-green-50 hover:bg-green-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex cursor-pointer"
               >
                 <span className="px-1.5 text-green-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">
                   Read More
                 </span>
                 <ChevronRight className="w-4 h-4 mt-1 text-green-600" />
-              </motion.button>
+              </motion.div>
             </Link>
           </motion.div>
 
@@ -390,17 +131,18 @@ const InfrastructureSection = ({
               id % 2 === 0 ? "lg:order-2" : "lg:order-1"
             }`}
           >
-            <div className="sm:w-[564px] w-full h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
+            <div className="sm:w-[564px] w-full h-[300px] sm:h-[400px] sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="relative w-full h-full sm:mt-5 sm:ml-5 rounded-3xl"
+                className="relative w-full h-full sm:mt-5 sm:ml-5 rounded-3xl overflow-hidden"
               >
                 <Image
                   src={imageSrc}
                   alt={imageAlt}
                   fill
                   className="object-cover rounded-3xl"
+                  sizes="(max-width: 768px) 100vw, 564px"
                 />
               </motion.div>
             </div>
@@ -409,4 +151,260 @@ const InfrastructureSection = ({
       </div>
     </motion.section>
   );
+}
+
+const infrastructureData = [
+  {
+    id: 1,
+    section: {
+      title: "Academic Facilities",
+      subtitle: "State-of-the-art learning environments",
+      achievements: [
+        {
+          title: "Spacious Classrooms",
+          description:
+            "Our classrooms are spacious, well-ventilated, and equipped with smart technology to enhance learning.",
+        },
+        {
+          title: "State-of-the-Art Library",
+          description:
+            "The school boasts a state-of-the-art library, rich in resources, to nurture a love for reading and research.",
+        },
+        {
+          title: "Dedicated Science Labs",
+          description:
+            "Dedicated science and computer labs are equipped with advanced tools, fostering curiosity and practical learning.",
+        },
+        {
+          title: "Study Areas",
+          description: "Quiet study spaces and group discussion rooms.",
+        },
+      ],
+      imageSrc: classrooom,
+      imageAlt: "Col Brown School Library",
+    },
+
+    link: "/boarding-life/classrooms",
+  },
+  {
+    id: 2,
+    section: {
+      title: "Sports and Recreation",
+      subtitle: "Integral to our philosophy of all-around development",
+      achievements: [
+        {
+          title: "Expansive Playgrounds",
+          description:
+            "We provide expansive playgrounds, courts, and facilities for games like hockey, football, basketball, cricket, karate, army drill & athletics.",
+        },
+        {
+          title: "Indoor Game Areas",
+          description:
+            "Indoor game areas and a swimming pool cater to recreational and competitive activities.",
+        },
+        {
+          title: "Fitness Center",
+          description:
+            "Our students engage in thrilling outdoor activities like paragliding, rock climbing, and trekking - combining adventure with nature exploration.",
+        },
+        {
+          title: "Counseling Center",
+          description: "Professional support for emotional well-being.",
+        },
+      ],
+      imageSrc: Athlete,
+      imageAlt: "Col Brown School Sports Complex",
+    },
+    link: "/boarding-life/sports-at-cbs",
+  },
+  {
+    id: 3,
+    section: {
+      title: "Hostel and Residential Facilities",
+      subtitle: "Home-away-from-home experience",
+      achievements: [
+        {
+          title: "Comfortable Dormitories",
+          description:
+            "Our boarding facilities ensure a home-away-from-home experience.",
+        },
+        {
+          title: "Clean Dining Hall",
+          description:
+            "Comfortable dormitories, clean dining hall, and well-balanced meals contribute to the well-being of every student.",
+        },
+        {
+          title: "Laundry Services",
+          description:
+            "Professional laundry and maintenance services available.",
+        },
+        {
+          title: "Common Rooms",
+          description:
+            "Spacious common areas for recreation and social interaction.",
+        },
+      ],
+      imageSrc: hostel,
+      imageAlt: "Col Brown School Dormitory",
+    },
+    link: "/boarding-life/hostel",
+  },
+  {
+    id: 4,
+    section: {
+      title: "Cultural and Creative Spaces",
+      subtitle: "Encouraging exploration of arts",
+      achievements: [
+        {
+          title: "Tamarind Theatre",
+          description:
+            "The Tamarind Theatre serves as a creative hub, encouraging students to explore performing and visual arts.",
+        },
+        {
+          title: "Music Rooms",
+          description: "Dedicated spaces for music education and practice.",
+        },
+        {
+          title: "Art Studios",
+          description:
+            "Art studios that inspire creativity and artistic expression.",
+        },
+        {
+          title: "Innovation Hub",
+          description: "Space for projects and experimental learning.",
+        },
+      ],
+      imageSrc: softSkills1,
+      imageAlt: "Col Brown School Cultural Spaces",
+    },
+    link: "/beyond-classroom/clubs-at-cbs",
+  },
+  {
+    id: 5,
+    section: {
+      title: "Library & Resource Center",
+      subtitle: "A treasure trove of knowledge",
+      achievements: [
+        {
+          title: "Extensive Collection",
+          description:
+            "Our library has lots of books for everyone - from textbooks and study materials to storybooks and magazines.",
+        },
+        {
+          title: "Quiet Study Areas",
+          description: "Quiet study areas for students to read and study.",
+        },
+
+        {
+          title: "Research Materials",
+          description:
+            "We have many books and magazines for students to learn more about the world.",
+        },
+        {
+          title: "E-Books and Digital Resources",
+          description:
+            "Along with regular books, we offer e-books, online articles, and digital resources to support today's learning needs.",
+        },
+      ],
+      imageSrc: library,
+      imageAlt: "Col Brown School Cultural Spaces",
+    },
+    link: "/boarding-life/library",
+  },
+  {
+    id: 6,
+    section: {
+      title: "Dining Hall",
+      subtitle: "A culinary delight for every palate",
+      achievements: [
+        {
+          title: "Clean Dining Hall",
+          description:
+            "Our dining hall is meticulously maintained, providing a hygienic and welcoming environment for students to enjoy their meals.",
+        },
+        {
+          title: "Nourishing Excellence",
+          description:
+            "Our dining hall offers a diverse menu crafted by nutritionists, ensuring every meal supports our students' academic and athletic performance.",
+        },
+        {
+          title: "Comfortable Dining Space",
+          description:
+            "Our dining hall is a cozy place where students can relax and enjoy their meals together.",
+        },
+        {
+          title: "Healthy Food Options",
+          description:
+            "We provide healthy food choices that help students stay active and focused in their studies.",
+        },
+      ],
+      imageSrc: dining,
+      imageAlt: "Col Brown School Cultural Spaces",
+    },
+
+    link: "/boarding-life/dining",
+  },
+  {
+    id: 7,
+    section: {
+      title: "Medical Facilities",
+      subtitle: "Your health is our priority",
+      achievements: [
+        {
+          title: "24/7 Medical Facility",
+          description:
+            "Our on-campus medical facility ensures 24/7 healthcare support with experienced medical professionals, prioritizing student wellbeing.",
+        },
+        {
+          title: "Emergency Response Team",
+          description: "A dedicated team ready to respond to emergencies.",
+        },
+        {
+          title: "First Aid Training",
+          description: "Regular first aid training for students and staff.",
+        },
+        {
+          title: "Regular Health Checks",
+          description: "Regular health checks for students and staff.",
+        },
+      ],
+      imageSrc: medical,
+      imageAlt: "Col Brown School Cultural Spaces",
+    },
+    link: "/boarding-life/medical-facilities",
+  },
+];
+
+const Infrastructure = () => {
+  const breadcrumbItems = [
+    { href: "/", label: "Home" },
+    { href: "/about/infrastructure", label: "About" },
+    { label: "Infrastructure" },
+  ];
+  return (
+    <section className="overflow-x-hidden">
+      <ImgAndBreadcrumb
+        title="Infrastructure"
+        imageSrc="/assets/about/infrastructure-banner.webp"
+        imageAlt="Description of the image"
+        breadcrumbItems={breadcrumbItems}
+      />
+      <section className="bg-gray-100">
+        <Container>
+          <div className="grid grid-cols-1 gap-10 sm:gap-5 pt-12">
+            {infrastructureData.map((item) => (
+              <InfrastructureSection
+                key={item.id}
+                {...item.section}
+                id={item.id}
+                link={item.link}
+              />
+            ))}
+          </div>
+        </Container>
+      </section>
+    </section>
+  );
 };
+
+export default Infrastructure;

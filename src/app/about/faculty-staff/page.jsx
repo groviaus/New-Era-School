@@ -5,13 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { Users, Stethoscope, UserCog, BookOpen } from "lucide-react"
-import Heading from "../../components/Heading"
+import Heading from "../../../components/Heading"
 
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-
-import { MessageCircle, ChevronRight } from "lucide-react";
+import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
+import Container from "../../../components/wrappers/Container";
 
 
 
