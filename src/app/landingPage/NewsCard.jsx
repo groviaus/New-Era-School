@@ -17,7 +17,13 @@ export function NewsCard({ item, index }) {
       <Card className="group cursor-pointer w-full hover:shadow-lg transition-all duration-300">
         <div className="p-4 flex gap-4">
           <div className="relative w-20 h-20 rounded-lg overflow-hidden">
-            <Image src={item.image} alt="" fill className="object-cover" />
+            {item.image && item.image !== "" ? (
+              <Image src={item.image} alt="" fill className="object-cover" />
+            ) : (
+              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-500 text-xs">No Image</span>
+              </div>
+            )}
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-xs text-muted-foreground">

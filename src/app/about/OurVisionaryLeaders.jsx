@@ -23,15 +23,15 @@ const OurVisionaryLeaders = () => {
   ];
   return (
     <section>
-      {/* <ImgAndBreadcrumb
+      <ImgAndBreadcrumb
         title="Our Visionary Leaders"
-        imageSrc={img}
+        imageSrc="/assets/about/colonel-william-brown.jpg"
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
-      /> */}
+      />
       <HeroBanner />
       <VisionaryCouple />
-      <MissionVision/>
+      <MissionVision />
       <InteractiveTimeline />
       <CrestAndMotto />
       <AchievementsSection />

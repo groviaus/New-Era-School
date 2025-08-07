@@ -7,13 +7,27 @@ export const OptimizedImage = ({ src, alt, className, width, height }) => {
   const [imageSrc, setImageSrc] = useState(null);
 
   useEffect(() => {
+    // Check if src is valid (not empty, null, or undefined)
+    if (!src || src === "") {
+      setLoading(false);
+      return;
+    }
+
     const img = new Image();
     img.src = src;
     img.onload = () => {
       setImageSrc(src);
       setLoading(false);
     };
+    img.onerror = () => {
+      setLoading(false);
+    };
   }, [src]);
+
+  // Don't render anything if src is empty or invalid
+  if (!src || src === "") {
+    return null;
+  }
 
   return (
     <>

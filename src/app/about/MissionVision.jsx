@@ -29,12 +29,12 @@ const MissionVision = () => {
   // ];
   return (
     <section>
-      {/* <ImgAndBreadcrumb
+      <ImgAndBreadcrumb
         title="Mission Vision"
-        imageSrc={img}
+        imageSrc="/assets/about/message-banner.jpg"
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
-      /> */}
+      />
       {/* <Container> */}
       {/* <Heading
             title="Our Mission and Vision"

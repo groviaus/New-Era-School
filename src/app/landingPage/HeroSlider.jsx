@@ -1,8 +1,10 @@
 "use client";
-import { useEffect, useRef, useState, memo, Suspense } from "react";
+import { useState, useEffect, memo, Suspense } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+const img1 = "/assets/landing/bg1.webp";
+const img2 = "/assets/boarding-life/PastoralCare-banner.jpg";
 // import img1Small from "../../assets/landing/bg1-small.webp";
 // import img2Small from "../../assets/boarding-life/PastoralCare-banner-small.jpg";
 
@@ -56,8 +58,8 @@ const HeroSlider = () => {
 
   const imgSlider = [
     {
-      image: "/assets/landing/bg1.webp",
-      imageSmall: "/assets/landing/bg1.webp",
+      image: img1,
+      imageSmall: img1,
       tagline: "Give your Dreams wings to fly",
       highlights: [
         "World-class curriculum",
@@ -66,8 +68,8 @@ const HeroSlider = () => {
       ],
     },
     {
-      image: "/assets/boarding-life/PastoralCare-banner.jpg",
-      imageSmall: "/assets/boarding-life/PastoralCare-banner.jpg",
+      image: img2,
+      imageSmall: img2,
       tagline: "Celebrate Every Special Moment",
       highlights: [
         "Cultural festivals",
@@ -138,43 +140,11 @@ SlideContent.displayName = "SlideContent";
 
 const SlideImage = memo(({ img, index }) => {
   const [loaded, setLoaded] = useState(false);
-  const imgRef = useRef(null);
-
-  useEffect(() => {
-    if (index === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries, observerInstance) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const imgElement = entry.target;
-            imgElement.src = imgElement.dataset.src;
-            observerInstance.unobserve(imgElement);
-          }
-        });
-      },
-      {
-        rootMargin: "50px",
-        threshold: 0.1,
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
-  }, [img.image, index]);
 
   return (
     <>
       <Image
-        ref={imgRef}
-        data-src={img.image}
+        src={img.image}
         alt={img.tagline}
         fill
         className={`object-cover transition-opacity duration-300 ${

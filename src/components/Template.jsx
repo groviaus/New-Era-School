@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import img from "../../assets/landing/bg1.webp";
 import Container from "../../components/wrappers/Container";
 import { Button } from "../../components/ui/button";
 import Heading from "../../components/Heading";
@@ -19,7 +18,7 @@ const Template = () => {
     <section>
       <ImgAndBreadcrumb
         title="Message"
-        imageSrc={img}
+        imageSrc="/assets/landing/bg1.webp"
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />

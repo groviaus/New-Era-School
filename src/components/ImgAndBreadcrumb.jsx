@@ -41,11 +41,13 @@ const ImgAndBreadcrumb = ({
 
   return (
     <div className="relative flex items-end justify-center h-44 sm:h-[34rem]">
-      <img
-        src={imageSrc}
-        alt={imageAlt || "Image"}
-        className="absolute top-0 left-0 object-cover w-full h-full shadow-sm -z-10"
-      />
+      {imageSrc && imageSrc !== "" && (
+        <img
+          src={imageSrc}
+          alt={imageAlt || "Image"}
+          className="absolute top-0 left-0 object-cover w-full h-full shadow-sm -z-10"
+        />
+      )}
       <div className="absolute top-0 left-0 w-full h-full inset-0 bg-black/40"></div>
       <WordPullUp
         words={title}

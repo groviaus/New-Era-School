@@ -126,8 +126,11 @@ function TestimonialCard({ testimonial, isActive }) {
         <CardContent className="p-6 flex flex-col items-center text-center h-full justify-between relative">
           <QuoteIcon className="absolute top-4 left-4 text-gray-300 w-8 h-8 opacity-50" />
           <Avatar className="w-48 h-fit mb-4 ring-4 ring-white">
-            <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-            {/* <AvatarFallback>{testimonial?.name?.charAt(0)}</AvatarFallback> */}
+            {testimonial.avatar && testimonial.avatar !== "" ? (
+              <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+            ) : (
+              <AvatarFallback>{testimonial?.name?.charAt(0)}</AvatarFallback>
+            )}
           </Avatar>
           <div className="relative mt-5">
             <div

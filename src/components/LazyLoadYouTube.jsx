@@ -2,9 +2,11 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function LazyLoadYouTube({ videoId, title }) {
   const [isInView, setIsInView] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export default function LazyLoadYouTube({ videoId, title }) {
           observer.disconnect(); // Disconnect once video starts playing
         }
       },
-      { threshold: 0.6 } // Increased threshold for better user experience
+      { threshold: 0.1 } // Reduced threshold for better visibility
     );
 
     if (containerRef.current) {
@@ -24,6 +26,10 @@ export default function LazyLoadYouTube({ videoId, title }) {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
 
   return (
     <div
@@ -37,19 +43,36 @@ export default function LazyLoadYouTube({ videoId, title }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-            onError={(e) => {
-              // Fallback to hqdefault if maxresdefault is not available
-              e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-            }}
-            alt={`${title} Thumbnail`}
-            className="w-full h-full object-cover"
-          />
+          <div className="relative w-full h-full">
+            <Image
+              src={
+                imageError
+                  ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+                  : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+              }
+              alt={`${title} Thumbnail`}
+              fill
+              className="object-cover"
+              onError={handleImageError}
+              priority
+            />
+            {/* Play button overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-white ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </motion.div>
       ) : (
         <iframe
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0&modestbranding=1`}
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
