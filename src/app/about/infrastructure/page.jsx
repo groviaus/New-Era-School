@@ -2,7 +2,6 @@
 
 import ImgAndBreadcrumb from "../../../components/ImgAndBreadcrumb";
 import Container from "../../../components/wrappers/Container";
-import Heading from "../../../components/Heading";
 
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";

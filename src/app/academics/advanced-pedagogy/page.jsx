@@ -11,13 +11,13 @@ import {
   BookOpen,
   FlaskConical,
 } from "lucide-react";
-import Heading from "../../components/Heading"; // Adjust the import path as necessary
-import EducationalJourney from "./EducationalJourney";
-import { Button } from "../../components/ui/button";
+import Heading from "../../../components/Heading"; // Adjust the import path as necessary
+import EducationalJourney from "../EducationalJourney";
+import { Button } from "../../../components/ui/button";
 import { Parallax } from "react-parallax";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
