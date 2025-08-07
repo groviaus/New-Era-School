@@ -12,13 +12,9 @@ const HeroBanner = () => {
       className="relative h-[40vh] sm:h-[70vh] flex items-center justify-center text-center text-white"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center sm:bg-center"
         style={{
           backgroundImage: `url(/assets/about/message-banner.jpg)`,
-          ...window.innerWidth < 640 && {
-            backgroundSize: "cover",
-            backgroundPosition: "10% 50%"
-          }
         }}
       ></div>
       <div className="relative z-10 max-w-4xl mx-auto px-4 bg-black/50 py-5 sm:py-10">

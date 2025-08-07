@@ -20,7 +20,7 @@ export function EventCard({ event, index }) {
         <span className="text-sm text-yellow-500">{event.date.month}</span>
       </div>
       <div className="space-y-2">
-        <h3 className="text-lg font-semibold transition-colors cursor-pointer group-hover:text-green-900 line-clamp-1 hover:underline hover:line-clamp-none">
+        <h3 className="text-lg font-semibold transition-colors cursor-pointer group-hover:text-green-900 sm:line-clamp-1 hover:underline hover:line-clamp-none">
           {event.title}
         </h3>
         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">

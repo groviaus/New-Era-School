@@ -85,7 +85,7 @@ export default function Timeline() {
       className="bg-gradient-to-r from-black via-gray-900/90 to-black"
     >
       <div className="max-w-6xl mx-auto px-6 sm:py-20 py-8 pb-16">
-        <div className="grid md:grid-cols-2 sm:gap-12 gap-8 mb-16 h-[400px]">
+        <div className="grid md:grid-cols-2 sm:gap-12 gap-8 mb-16 h-[520px] sm:h-[400px]">
           <motion.div
             key={selectedYear}
             initial={{ opacity: 0, x: -20 }}
@@ -123,13 +123,21 @@ export default function Timeline() {
           >
             {timelineData[selectedYear].image &&
             timelineData[selectedYear].image !== "" ? (
-              <Image
-                src={timelineData[selectedYear].image}
-                alt={`Historical image from ${selectedYear}`}
-                fill
-               
-                className="object-cover rounded"
-              />
+              <>
+                <Image
+                  src={timelineData[selectedYear].image}
+                  alt={`Historical image from ${selectedYear}`}
+                  height={400}
+                  width={600}
+                  className="object-cover rounded md:hidden"
+                />
+                <Image
+                  src={timelineData[selectedYear].image}
+                  alt={`Historical image from ${selectedYear}`}
+                  fill
+                  className="object-cover rounded hidden md:block"
+                />
+              </>
             ) : (
               <div className="w-full h-full bg-gray-700 flex items-center justify-center">
                 <span className="text-gray-400">No Image Available</span>
