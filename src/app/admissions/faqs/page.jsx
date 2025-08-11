@@ -1,11 +1,8 @@
-import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import img from "../../assets/admissions/faqs.jpeg";
-import faq from "../../assets/admissions/faq.jpg";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
-import { MessageCircle, ChevronRight } from "lucide-react";
+"use client";
+
+import ImgAndBreadcrumb from "@/components/ImgAndBreadcrumb";
+import Container from "@/components/wrappers/Container";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const FAQ = () => {
@@ -25,7 +22,7 @@ const FAQ = () => {
     <section>
       <ImgAndBreadcrumb
         title="Frequently Asked Questions"
-        imageSrc={faq}
+        imageSrc={"/assets/admissions/faq.jpg"}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
         className="!text-xl sm:!text-5xl"
@@ -48,8 +45,6 @@ const FAQ = () => {
 };
 
 export default FAQ;
-
-("use client");
 
 import {
   Accordion,
@@ -123,11 +118,13 @@ const FAQSection = () => {
                 questions about our school, admissions, facilities, and more.
               </p>
             </div>
-            <div className="relative sm:aspect-[3/4] shadow-lg  max-h-96 border brightness-75 border-gray-200 w-full overflow-hidden rounded-2xl">
-              <img
-                src={faq}
+            <div className="relative sm:aspect-[3/4] shadow-lg max-h-96 border brightness-75 border-gray-200 w-full overflow-hidden rounded-2xl h-96">
+              <Image
+                src={"/assets/admissions/faq.jpg"}
                 alt="Customer support representative"
-                className="h-full w-full object-cover hover:scale-105 transition-all duration-300"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-cover hover:scale-105 transition-all duration-300"
               />
             </div>
           </motion.div>

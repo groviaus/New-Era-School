@@ -1,11 +1,7 @@
-import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import img from "../../assets/admissions/feesDetails.webp";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
-import { MessageCircle, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+"use client";
+import ImgAndBreadcrumb from "@/components/ImgAndBreadcrumb";
+import Container from "@/components/wrappers/Container";
+import Heading from "@/components/Heading";
 import FeeStructure from "./FeeStructure";
 
 const FeeDetails = () => {
@@ -18,7 +14,7 @@ const FeeDetails = () => {
     <section>
       <ImgAndBreadcrumb
         title="Fee Details"
-        imageSrc={img}
+        imageSrc={"/assets/admissions/feesDetails.webp"}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />

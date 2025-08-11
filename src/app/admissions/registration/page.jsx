@@ -1,9 +1,9 @@
+"use client";
 import { useState } from "react";
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import img from "../../assets/admissions/registration.jpg";
-import Container from "../../components/wrappers/Container";
-import { Button } from "../../components/ui/button";
-import Heading from "../../components/Heading";
+import ImgAndBreadcrumb from "@/components/ImgAndBreadcrumb";
+import Container from "@/components/wrappers/Container";
+import { Button } from "@/components/ui/button";
+import Heading from "@/components/Heading";
 import { MessageCircle, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import RegistrationForm from "./RegistrationForm";
@@ -18,7 +18,7 @@ const Registration = () => {
     <section>
       <ImgAndBreadcrumb
         title="Registration"
-        imageSrc={img}
+        imageSrc={"/assets/admissions/registration.jpg"}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />

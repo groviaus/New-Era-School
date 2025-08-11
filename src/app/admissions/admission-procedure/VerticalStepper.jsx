@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -8,10 +9,10 @@ import {
   ClipboardList,
 } from "lucide-react";
 import useStepperState from "./useStepperState";
-import { Button } from "../../components/ui/button";
+import { Button } from "@/components/ui/button";
 import AdmissionsCriteria from "./AdmissionsCriteria";
 import AdmissionSidebar from "./AdmissionSidebar";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const steps = [
   {
     title: "Fill Registration Form",
@@ -34,10 +35,10 @@ const steps = [
           experienced staff members. Every big and small step leading to the
           child's development is looked upon as an achievement by the School.
         </p>
-        <Link to="/admissions/registration">
-        <Button className="flex items-center px-4 py-2 mt-6 text-white transition-colors bg-gray-800 rounded hover:bg-gray-700">
-          Register Now <ClipboardList className="w-4 h-4" />
-        </Button>
+        <Link href="/admissions/registration">
+          <Button className="flex items-center px-4 py-2 mt-6 text-white transition-colors bg-gray-800 rounded hover:bg-gray-700">
+            Register Now <ClipboardList className="w-4 h-4" />
+          </Button>
         </Link>
       </>
     ),

@@ -817,7 +817,8 @@ const AdmissionInfo = ({ formData, handleInputChange, errors }) => (
         error={errors.addmissionclass}
       />
       <div className="space-y-2">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-start
+         space-x-2">
           <Checkbox
             id="agree"
             checked={formData.agree || false}
@@ -825,11 +826,8 @@ const AdmissionInfo = ({ formData, handleInputChange, errors }) => (
             className={errors.agree ? "border-red-500" : ""}
           />
           <label htmlFor="agree" className="text-sm text-green-800">
-            I agree to the{" "}
-            <a href="#" className="text-green-600 hover:underline">
-              terms & conditions
-            </a>
-            . <span className="text-red-500">*</span>
+            I agree to that the details provided are correct and I will be
+            responsible for any false information provided.
           </label>
         </div>
         {errors.agree && <p className="text-red-500 text-sm">{errors.agree}</p>}
