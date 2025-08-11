@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { CheckCircle2, XCircle, AlertCircle } from "lucide-react";
 
@@ -90,4 +90,19 @@ const PaymentStatus = () => {
   );
 };
 
-export default PaymentStatus;
+export default function Page() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center p-4">
+          <div className="max-w-md w-full border rounded-lg p-8 text-center">
+            <div className="h-8 w-8 rounded-full border-2 border-green-600 border-t-transparent animate-spin mx-auto mb-4" />
+            <p className="text-gray-600">Loading payment status...</p>
+          </div>
+        </div>
+      }
+    >
+      <PaymentStatus />
+    </Suspense>
+  );
+}
