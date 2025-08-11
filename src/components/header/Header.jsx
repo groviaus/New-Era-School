@@ -38,9 +38,9 @@ export default function Header() {
             <Image
               src="/assets/logo.png"
               alt="Col Brown Cambridge School"
-              width={200}
+              width={280}
               height={64}
-              className="bg-whit p-2 rounded-md h-16"
+              className="object-contain p-2 rounded-md h-16"
             />
           </a>
           <MainNav />

@@ -38,7 +38,7 @@ export default function Footer() {
       { name: "Newsletter", href: "/newsletter" },
       {
         name: "Calendar",
-        href: "https://col-brown-school.vercel.app/assets/calendar-january-may-2025-B8lPefh4.pdf",
+        href: "https://www.colbrownschool.com/assets/calendar-january-may-2025-B8lPefh4.pdf",
         target: 1,
       },
       { name: "Notice(s)", href: "/notices" },

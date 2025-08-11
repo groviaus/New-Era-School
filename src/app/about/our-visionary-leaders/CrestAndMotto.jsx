@@ -15,14 +15,14 @@ const CrestElement = ({ title }) => {
       className="relative"
     >
       <motion.div
-        className="relative w-full h-[300px]"
+        className="relative w-80 h-[300px]"
         style={{ filter: isHovered ? "drop-shadow(0 0 5px #ffd700)" : "drop-shadow(0 0 5px #006400)" }}
       >
         <Image
           src="/assets/landing/logo_col_brown.png"
           alt="logo"
           fill
-          className="transition-transform duration-300"
+          className="transition-transform object-contain duration-300"
         />
       </motion.div>
       {isHovered && (
