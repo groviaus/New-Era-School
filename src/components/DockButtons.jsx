@@ -3,13 +3,13 @@
 import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
-import { Link } from "react-router-dom";
-import DrawerDock from "@/pages/header/DrawerDock";
+import Link from "next/link";
+import DrawerDock from "@/components/header/DrawerDock";
 
 /** @type {React.SVGProps<SVGSVGElement>} */
 const IconProps = {};
 
-export function DockDemo() {
+export function DockButtons() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   React.useEffect(() => {
@@ -50,7 +50,7 @@ export function DockDemo() {
 
 const Icons = {
   home: (props) => (
-    <Link to="/">
+      <Link href="/">
       <svg
         {...props}
         xmlns="http://www.w3.org/2000/svg"

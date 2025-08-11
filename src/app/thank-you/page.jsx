@@ -21,7 +21,7 @@ const ThankYou = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [navigate]);
+  }, [router]);
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-gradient-to-tr from-green-900 via-green-950 to-green-900">

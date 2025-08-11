@@ -21,8 +21,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 // import { State, City } from "country-state-city";
 import { State, City } from "../utils/stateCity";
-import { ConfettiButton } from "@/components/magicui/confetti";
-import { useNavigate } from "react-router-dom";
+
+import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
 export function EnquiryModal() {
@@ -42,7 +42,7 @@ export function EnquiryModal() {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -147,7 +147,7 @@ export function EnquiryModal() {
         setCities([]);
         setIsOpen(false);
         sessionStorage.setItem("enquiryModalShown", "true");
-        navigate("/thank-you");
+        router.push("/thank-you");
       } else {
         throw new Error(result.message || "Failed to submit form");
       }
