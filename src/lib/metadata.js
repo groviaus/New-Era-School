@@ -15,6 +15,32 @@ export function findMetadataByPath(path) {
     };
   }
 
+  // Try to match dynamic/parameterized routes like ":param"
+  for (const item of seoMetadata) {
+    // Build a regex that matches paths with dynamic segments defined via :param
+    // Example: "/boarding-life/sports-at-cbs/:sport" => /^\/boarding-life\/sports-at-cbs\/[^/]+$/
+    if (item.path && item.path.includes(":")) {
+      const dynamicPattern = new RegExp(
+        `^${item.path
+          .split("/")
+          .map((segment) =>
+            segment.startsWith(":")
+              ? "[^/]+"
+              : segment.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")
+          )
+          .join("/")}$`
+      );
+      if (dynamicPattern.test(cleanPath)) {
+        return {
+          title: item.title,
+          description: item.description,
+          // For dynamic paths, prefer the actual resolved path for canonical
+          canonical: `https://www.colbrownschool.com${cleanPath}`,
+        };
+      }
+    }
+  }
+
   // If no exact match, return default metadata
   return {
     title: "Best Boarding School In Dehradun For Boys | Residential School",

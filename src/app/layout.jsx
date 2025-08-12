@@ -18,7 +18,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = generateMetadataForPath("/");
+export const metadata = {
+  ...generateMetadataForPath("/"),
+  icons: { icon: "/favicon.png" },
+};
 
 export default function RootLayout({ children }) {
   return (

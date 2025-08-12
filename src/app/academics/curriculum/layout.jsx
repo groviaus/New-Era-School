@@ -1,9 +1,9 @@
 import { generateMetadataForPath } from "@/lib/metadata";
 
 export function generateMetadata() {
-  return generateMetadataForPath("/boarding-life/sports-at-cbs");
+  return generateMetadataForPath("/academics/curriculum");
 }
 
-export default function SportsAtCBSLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children}</>;
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NotFoundFallback() {
+export default function NotFound() {
   const pathname = usePathname();
   const isPDF = pathname?.toLowerCase().endsWith(".pdf");
 
