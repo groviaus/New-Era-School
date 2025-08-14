@@ -9,23 +9,23 @@ import Link from "next/link";
 
 export default function SchoolEvents() {
   const newsItems = [
+  
     {
-      date: "NOVEMBER 27, 2024",
-      title: "Ashwani Rinwa Obituary",
-      image: "/assets/landing/events/news.webp",
+      date: "AUGUST 11, 2025",
+      title: "MUFC, Col Brown School score wins in St George's College Heritage Cup",
+      image: "/assets/beyond-classroom/news-events/news/news_soccer3.jpg",
       type: "NEWS",
     },
     {
-      date: "OCTOBER 21, 2024",
-      title: "Sri. Vijay Kumar Farshwal Obituary",
-      image: "/assets/landing/events/news.webp",
+      date: "AUGUST 11, 2025", 
+      title: "St George's College Heritage Cup enters semi-final stage",
+      image: "/assets/beyond-classroom/news-events/news/news_soccer2.jpg",
       type: "NEWS",
     },
     {
-      date: "OCTOBER 5, 2024",
-      title:
-        "Col. Brown Cambridge School rated amongst the top Boarding Schools in North India",
-      image: "/assets/landing/events/news.webp",
+      date: "AUGUST 1, 2025",
+      title: "St George's Heritage Cup begins; CBS wins on penalties after 4–4 draw",
+      image: "/assets/beyond-classroom/news-events/news/news_soccer1.jpg",
       type: "NEWS",
     },
     // {
@@ -37,6 +37,14 @@ export default function SchoolEvents() {
   ];
 
   const events = [
+    {
+      date: { day: "15", month: "AUG" },
+      title: "Suron Ka Sangam – Music Workshop",
+      year: "2025",
+      location: "Col. Brown Cambridge School",
+      description:
+        "Music workshop by Pt. Vishwanath Ji and Pt. Rajendra Prasad Banarjee. 15–17 August 2025, 10:30 AM to 12:30 PM.",
+    },
     {
       date: { day: "18", month: "MAY" },
       title: "Wipro Earthian Award Ceremony",
@@ -53,13 +61,13 @@ export default function SchoolEvents() {
       description:
         "The farewell party for the Class 12th students of Col. Brown Cambridge School was held on January 25, 2024",
     },
-    {
-      date: { day: "19", month: "FEB" },
-      title: "Migratory Bird Watching at Asan Barrage",
-      year: "2024",
-      location: "Asan Barrage",
-      description: "Join us for a day of bird watching at Asan Barrage.",
-    },
+    // {
+    //   date: { day: "19", month: "FEB" },
+    //   title: "Migratory Bird Watching at Asan Barrage",
+    //   year: "2024",
+    //   location: "Asan Barrage",
+    //   description: "Join us for a day of bird watching at Asan Barrage.",
+    // },
   ];
 
   const pastEvents = [

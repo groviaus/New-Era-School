@@ -9,6 +9,7 @@ import SchoolEvents from "./SchoolEvents";
 import Spotlight from "./Spotlight";
 import TimeLine from "./TimeLine";
 import { testimonials } from "./testimonialData";
+import EventsShowcase from "./EventsShowcase";
 const Landing = () => {
   return (
     <div className="overflow-hidden">
@@ -16,6 +17,7 @@ const Landing = () => {
       <FeatureImage />
       <Legacy />
       {/* <AboutCB /> */}
+      <EventsShowcase />
       <AboutCBB />
       <TimeLine />
       <VirtualTour />

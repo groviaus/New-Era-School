@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { DockButtons } from "@/components/DockButtons";
 import { EnquiryModal } from "@/components/EnquiryModal";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import GlobalEventPopup from "@/components/GlobalEventPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
         <ScrollToTop />
         <DockButtons />
         <EnquiryModal />
+        <GlobalEventPopup />
       </body>
     </html>
   );

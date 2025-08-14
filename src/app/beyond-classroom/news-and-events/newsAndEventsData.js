@@ -1,8 +1,79 @@
 const news = "/assets/beyond-classroom/news-events/news-event-demo.jpg";
 const wipro =
   "/assets/beyond-classroom/news-events/wipro-earthian-award-ceremony-thumb.jpg";
+const suronKaSangam =
+  "/assets/beyond-classroom/news-events/events/suron_ka_sangam.jpg";
+const suronKaSangamPopup =
+  "/assets/beyond-classroom/news-events/events/suron_ka_sangam_popup.jpg";
+const newsSoccer1 =
+  "/assets/beyond-classroom/news-events/news/news_soccer1.jpg";
+const newsSoccer2 =
+  "/assets/beyond-classroom/news-events/news/news_soccer2.jpg";
+const newsSoccer3 =
+  "/assets/beyond-classroom/news-events/news/news_soccer3.jpg";
 
 export const eventData = [
+  {
+    id: 7,
+    category: "Events",
+    date: "August 15–17, 2025",
+    images: [suronKaSangam, suronKaSangamPopup],
+    title: "Suron Ka Sangam – Music Workshop",
+    excerpt:
+      "Music workshop by Pt. Vishwanath Ji and Pt. Rajendra Prasad Banarjee. 15–17 August 2025, 10:30 AM to 12:30 PM.",
+    fullContent: `Suron Ka Sangam – Music Workshop
+
+Dates: 15–17 August 2025
+Time: 10:30 AM to 12:30 PM
+
+Conducted by: Pt. Vishwanath Ji & Pt. Rajendra Prasad Banarjee
+
+Organised by: Col. Brown Cambridge School, Dehradun.`,
+  },
+  {
+    id: 8,
+    category: "News",
+    date: "August 11, 2025",
+    images: [newsSoccer3],
+    title:
+      "MUFC, Col Brown School score wins in St George's College Heritage Cup",
+    excerpt:
+      "Col Brown defeated Mussoorie Public School 4–1. Goals: Ayan Malik (2', 40'), Justin (35'), Ritanshu (45').",
+    fullContent: `Mussoorie, 10 Aug: St George's College is conducting the 52nd edition of the St George's College Heritage Cup (aka Jackie) Invitational Soccer Tournament from 1 to 14 August. Two matches were held today.
+
+In the second match played today, Col Brown School defeated Mussoorie Public School 4–1. For Col Brown School, the goals were scored by Ayan Malik in the 2nd and 40th minutes, Justin in the 35th minute and Ritanshu in the 45th minute. For Mussoorie Public School, the only goal was scored by Akshat in the 55th minute.
+
+Source: Garhwal Post clipping.`,
+  },
+  {
+    id: 9,
+    category: "News",
+    date: "August 11, 2025",
+    images: [newsSoccer2],
+    title: "St George’s College Heritage Cup enters semi-final stage",
+    excerpt:
+      "Col Brown drew 3–3 with Woodstock School. Goals: Malik (14'), Agrim (19'), Arpan (29').",
+    fullContent: `Mussoorie, 11 Aug: St George's College, Mussoorie, is holding the 52nd edition of the St George's College Heritage Cup (aka Jackie) Invitational Soccer Tournament from 1 to 14 August with 26 teams participating.
+
+Three matches were played today. The first match played today between Col Brown School and Woodstock School ended in a draw, 3–3. For Col Brown School, the goals were scored by Malik in the 14th minute, Agrim in the 19th minute and Arpan in the 29th minute. For Woodstock School, the goals were scored by Aditya Chandra in the 2nd and 16th minutes and Yuvaan in the 12th minute.
+
+Source: Garhwal Post clipping.`,
+  },
+  {
+    id: 10,
+    category: "News",
+    date: "August 1, 2025",
+    images: [newsSoccer1],
+    title:
+      "St George’s Heritage Cup begins; CBS wins on penalties after 4–4 draw",
+    excerpt:
+      "Col Brown Cambridge School beat Doon Valley Public School 8–7 on penalties after a 4–4 draw; Arpan scored all four in regulation time.",
+    fullContent: `Mussoorie, 1 Aug: The 52nd edition of the St George's College Heritage Cup (aka Jackie) Invitational Soccer Tournament began at St George’s College, Mussoorie.
+
+The third match of the day was played between Doon Valley Public School and Colonel Brown Cambridge School, which ended in a draw 4–4. For Colonel Brown Cambridge School, all the four goals were scored by Arpan in the 7th, 48th, 51st and 56th minutes. As the match concluded in a draw at full time, a penalty shootout was held, in which Colonel Brown Cambridge School edged past Doon Valley Public School with a score of 8–7.
+
+Source: Garhwal Post clipping.`,
+  },
   {
     id: 1,
     category: "News",
