@@ -58,6 +58,20 @@ export function generateMetadataForPath(path) {
     description: metadata.description,
     keywords:
       "education, school, CBS, learning, boarding school, residential school, boys school, Dehradun schools, Col Brown School",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    authors: [{ name: "Col Brown School" }],
+    creator: "Col Brown School",
+    publisher: "Col Brown School",
     openGraph: {
       title: metadata.title,
       description: metadata.description,
