@@ -7,7 +7,7 @@ import { generateMetadataForPath } from "@/lib/metadata";
 import ScrollToTop from "@/components/ScrollToTop";
 import { DockButtons } from "@/components/DockButtons";
 import { EnquiryModal } from "@/components/EnquiryModal";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       {process.env.NODE_ENV === "production" && (
-        <GoogleTagManager gtmId="GTM-PFQ9ZDB" />
+        <>
+          <GoogleTagManager gtmId="GTM-PFQ9ZDB" />
+          <GoogleAnalytics gaId="G-QJTE1GFB7M" />
+        </>
       )}
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
