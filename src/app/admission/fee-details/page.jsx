@@ -7,7 +7,7 @@ import FeeStructure from "./FeeStructure";
 const FeeDetails = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/admissions/fee-details", label: "Admissions" },
+    { href: "/admission/fee-details", label: "Admissions" },
     { label: "Fee Details" },
   ];
   return (

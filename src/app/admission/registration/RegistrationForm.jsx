@@ -84,7 +84,7 @@ const RegistrationForm = () => {
   const fetchCSRFToken = async () => {
     try {
       const response = await fetch(
-        "https://www.colbrownschool.com/admissions/registration/",
+        "https://www.colbrownschool.com/admission/registration/",
         {
           method: "GET",
           credentials: "include",

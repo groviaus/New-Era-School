@@ -1,7 +1,7 @@
 import { generateMetadataForPath } from "@/lib/metadata";
 
 export function generateMetadata() {
-  return generateMetadataForPath("/admissions/admission-procedure");
+  return generateMetadataForPath("/admission/admission-procedure");
 }
 
 export default function Layout({ children }) {

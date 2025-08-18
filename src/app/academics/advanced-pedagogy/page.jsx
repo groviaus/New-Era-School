@@ -305,7 +305,7 @@ const AdvancedPedagogy = () => {
             Take the first step towards an exceptional education. Apply now!
           </motion.p>
           <Link
-            href="/admissions/registration"
+            href="/admission/registration"
             onClick={() => window.scrollTo(0, 0)}
           >
             <motion.button

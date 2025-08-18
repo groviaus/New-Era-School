@@ -126,26 +126,26 @@
     "description": "Stay updated with the latest news and events at Col Brown School. Explore beyond the classroom activities, achievements, and happenings at one of the top residential schools in India."
   },
   {
-    "path": "/admissions/admission-procedure",
-    "canonical": "/admissions/admission-procedure",
+    "path": "/admission/admission-procedure",
+    "canonical": "/admission/admission-procedure",
     "title": "Admission Procedure | Col Brown School - Premier Boarding School in India",
     "description": "Explore the seamless admission procedure at Col Brown School, one of the top residential schools in India. Learn about eligibility, requirements, and how to apply today!"
   },
   {
-    "path": "/admissions/fee-details",
-    "canonical": "/admissions/fee-details",
+    "path": "/admission/fee-details",
+    "canonical": "/admission/fee-details",
     "title": "Admission & Fee Details | Col Brown School – Premier Boarding School in India",
     "description": "Explore Col Brown School's admission process and fee details. Discover one of the top residential schools in India, offering quality education and a nurturing environment for holistic development."
   },
   {
-    "path": "/admissions/registration",
-    "canonical": "/admissions/registration",
+    "path": "/admission/registration",
+    "canonical": "/admission/registration",
     "title": "Admissions & Registration - The Best Boarding School in Dehradun | Col Brown School",
     "description": "Enroll your child at Col Brown School, one of the best boarding schools in Dehradun. Explore our admissions process and register today for a holistic and enriching education."
   },
   {
-    "path": "/admissions/faqs",
-    "canonical": "/admissions/faqs",
+    "path": "/admission/faqs",
+    "canonical": "/admission/faqs",
     "title": "Admissions FAQs | Col Brown School – Top Boarding School in Dehradun",
     "description": "Find answers to common queries about admissions at Col Brown School, one of the top boarding schools in Dehradun. Learn about eligibility, fees, and application process."
   },

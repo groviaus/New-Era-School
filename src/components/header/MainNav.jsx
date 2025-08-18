@@ -180,27 +180,27 @@ const menuItems = [
     items: [
       {
         name: "Admission Procedure",
-        path: "/admissions/admission-procedure",
+        path: "/admission/admission-procedure",
         icon: <ClipboardList className="w-4 h-4 mr-2" />,
       },
       {
         name: "Fee Details",
-        path: "/admissions/fee-details",
+        path: "/admission/fee-details",
         icon: <Receipt className="w-4 h-4 mr-2" />,
       },
       {
         name: "Registration",
-        path: "/admissions/registration",
+        path: "/admission/registration",
         icon: <FileCheck className="w-4 h-4 mr-2" />,
       },
       // {
       //   name: "Transfer Certificate",
-      //   path: "/admissions/transfer-certificate",
+      //   path: "/admission/transfer-certificate",
       //   icon: <FileCheck className="w-4 h-4 mr-2" />,
       // },
       {
         name: "FAQs",
-        path: "/admissions/faqs",
+        path: "/admission/faqs",
         icon: <HelpCircle className="w-4 h-4 mr-2" />,
       },
     ],

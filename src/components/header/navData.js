@@ -57,10 +57,10 @@ export const navlinks = [
     name: "Admissions",
     path: "/admissions",
     submenu: [
-      { name: "Admission Procedure", path: "/admissions/admission-procedure" },
-      { name: "Fee Details", path: "/admissions/fee-details" },
-      { name: "Registration", path: "/admissions/registration" },
-      { name: "FAQs", path: "/admissions/faqs" },
+      { name: "Admission Procedure", path: "/admission/admission-procedure" },
+      { name: "Fee Details", path: "/admission/fee-details" },
+      { name: "Registration", path: "/admission/registration" },
+      { name: "FAQs", path: "/admission/faqs" },
     ],
   },
   {

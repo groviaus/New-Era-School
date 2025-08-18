@@ -50,7 +50,7 @@ export default function TopBar() {
             </Link>
 
             <Link
-              href="/admissions/registration"
+              href="/admission/registration"
               className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-md hover:bg-yellow-500 text-center sm:text-left"
             >
               Register Now

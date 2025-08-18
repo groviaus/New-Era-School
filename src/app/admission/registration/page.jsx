@@ -11,7 +11,7 @@ import RegistrationForm from "./RegistrationForm";
 const Registration = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/admissions/registration", label: "Admissions" },
+    { href: "/admission/registration", label: "Admissions" },
     { label: "Registration" },
   ];
   return (

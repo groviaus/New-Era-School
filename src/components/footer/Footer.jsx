@@ -14,7 +14,7 @@ export default function Footer() {
   const footerLinks = {
     "Quick Links": [
       { name: "About CBS", href: "/about/legacy-of-cbs" },
-      { name: "Admissions", href: "/admissions/admission-procedure" },
+      { name: "Admissions", href: "/admission/admission-procedure" },
       // { name: "Blog", href: "/blog" },
       { name: "Alumni Registration", href: "/alma-mater" },
       {
@@ -22,7 +22,7 @@ export default function Footer() {
         href: "https://www.colbrownschool.com/cbs_prbms/login",
         target: "_blank",
       },
-      { name: "Register Now", href: "/admissions/registration" },
+      { name: "Register Now", href: "/admission/registration" },
       { name: "Contact", href: "/contact-us" },
     ],
     "Campus Life": [
@@ -34,7 +34,7 @@ export default function Footer() {
     ],
     Academics: [
       { name: "News & Events", href: "/beyond-classroom/news-and-events" },
-      { name: "Fee Structure", href: "/admissions/fee-details" },
+      { name: "Fee Structure", href: "/admission/fee-details" },
       { name: "Newsletter", href: "/newsletter" },
       {
         name: "Calendar",

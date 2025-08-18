@@ -11,7 +11,7 @@ import VerticalStepper from "./VerticalStepper";
 const AdmissionProcedure = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/admissions/admission-procedure", label: "Admissions" },
+    { href: "/admission/admission-procedure", label: "Admissions" },
     { label: "Admission Procedure" },
   ];
   return (

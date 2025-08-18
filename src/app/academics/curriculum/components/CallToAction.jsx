@@ -22,7 +22,7 @@ export default function CallToAction() {
           className="flex flex-wrap flex-col sm:flex-row justify-center gap-8 sm:gap-4"
         >
           <Link
-            href="/admissions/registration"
+            href="/admission/registration"
             onClick={() => window.scrollTo(0, 0)}
           >
             <motion.a
@@ -46,7 +46,7 @@ export default function CallToAction() {
             </motion.a>
           </a>
           <Link
-            href="/admissions/fee-details"
+            href="/admission/fee-details"
             onClick={() => window.scrollTo(0, 0)}
           >
             <motion.a

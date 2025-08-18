@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const FAQ = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/admissions/faqs", label: "Admissions" },
+    { href: "/admission/faqs", label: "Admissions" },
     {
       label: (
         <>

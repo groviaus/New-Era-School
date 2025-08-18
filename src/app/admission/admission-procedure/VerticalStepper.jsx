@@ -35,7 +35,7 @@ const steps = [
           experienced staff members. Every big and small step leading to the
           child's development is looked upon as an achievement by the School.
         </p>
-        <Link href="/admissions/registration">
+        <Link href="/admission/registration">
           <Button className="flex items-center px-4 py-2 mt-6 text-white transition-colors bg-gray-800 rounded hover:bg-gray-700">
             Register Now <ClipboardList className="w-4 h-4" />
           </Button>
