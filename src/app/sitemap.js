@@ -11,6 +11,30 @@ async function getWpBlogSlugs() {
 
   const auth = Buffer.from(`${WP_USER}:${WP_PASS}`).toString("base64");
 
+  console.log("🔑 WordPress credentials prepared");
+  console.log("🔑 WP_USER:", WP_USER);
+  console.log("🔑 WP_PASS length:", WP_PASS.length);
+
+  // First, test if the API endpoint is accessible
+  try {
+    console.log("🧪 Testing WordPress API accessibility...");
+    const testRes = await fetch(
+      "https://www.colbrownschool.com/blog/wp-json/",
+      {
+        cache: "no-store",
+      }
+    );
+    console.log(`🧪 Test response status: ${testRes.status}`);
+
+    if (testRes.ok) {
+      console.log("✅ WordPress API endpoint is accessible");
+    } else {
+      console.log("⚠️ WordPress API endpoint returned status:", testRes.status);
+    }
+  } catch (testError) {
+    console.error("❌ WordPress API endpoint test failed:", testError.message);
+  }
+
   let allPosts = [];
   let page = 1;
   let hasMore = true;
@@ -21,15 +45,20 @@ async function getWpBlogSlugs() {
       const apiUrl = `https://www.colbrownschool.com/blog/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`;
 
       console.log(`🔍 Fetching WordPress posts page ${page}...`);
+      console.log(`🔍 API URL: ${apiUrl}`);
 
       const res = await fetch(apiUrl, {
         headers: {
           Authorization: `Basic ${auth}`,
+          "User-Agent": "ColBrown-Sitemap/1.0",
         },
         cache: "no-store",
-        // Add timeout for production
-        signal: AbortSignal.timeout(15000), // 15 second timeout
+        // Remove timeout temporarily to debug
+        // signal: AbortSignal.timeout(15000), // 15 second timeout
       });
+
+      console.log(`📡 Response status: ${res.status}`);
+      console.log(`📡 Response ok: ${res.ok}`);
 
       if (!res.ok) {
         console.error(
@@ -39,11 +68,23 @@ async function getWpBlogSlugs() {
           "Response headers:",
           Object.fromEntries(res.headers.entries())
         );
+
+        // Try to get error response body
+        try {
+          const errorText = await res.text();
+          console.error("Error response body:", errorText);
+        } catch (e) {
+          console.error("Could not read error response body");
+        }
         break;
       }
 
       const posts = await res.json();
       console.log(`✅ Fetched ${posts.length} posts from page ${page}`);
+
+      if (posts.length > 0) {
+        console.log(`📝 Sample post:`, posts[0]);
+      }
 
       if (posts.length === 0) {
         hasMore = false;
@@ -64,6 +105,7 @@ async function getWpBlogSlugs() {
   } catch (error) {
     console.error("❌ Error fetching WordPress posts:", error.message);
     console.error("Error details:", error);
+    console.error("Error stack:", error.stack);
 
     // Return empty array instead of failing completely
     return [];
@@ -115,6 +157,18 @@ export default async function sitemap() {
     console.log(`   - Static routes: ${seoRoutes.length}`);
     console.log(`   - WordPress routes: ${wpRoutes.length}`);
     console.log(`   - Total routes: ${allRoutes.length}`);
+
+    // Debug: Show some WordPress routes if they exist
+    if (wpRoutes.length > 0) {
+      console.log("📝 Sample WordPress routes:");
+      wpRoutes.slice(0, 3).forEach((route, index) => {
+        console.log(`   ${index + 1}. ${route.url}`);
+      });
+    } else {
+      console.log(
+        "⚠️ No WordPress routes found - this indicates the API call failed"
+      );
+    }
 
     return allRoutes.map((route) => ({
       ...route,
