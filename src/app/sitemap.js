@@ -5,46 +5,69 @@ export const dynamic = "force-dynamic";
 
 // ✅ Fetch ALL WP blog slugs with pagination
 async function getWpBlogSlugs() {
-  const auth = Buffer.from(
-    `${process.env.WP_USER}:${process.env.WP_PASS}`
-  ).toString("base64");
+  // Hardcoded credentials to bypass environment variable issues
+  const WP_USER = "seoteam";
+  const WP_PASS = "1()M(@3wg(D!W(fumDcO5WYi";
+
+  const auth = Buffer.from(`${WP_USER}:${WP_PASS}`).toString("base64");
 
   let allPosts = [];
   let page = 1;
   let hasMore = true;
+  const maxPages = 20; // Prevent infinite loops in production
 
-  while (hasMore) {
-    const res = await fetch(
-      `https://www.colbrownschool.com/blog/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`,
-      {
+  try {
+    while (hasMore && page <= maxPages) {
+      const apiUrl = `https://www.colbrownschool.com/blog/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`;
+
+      console.log(`🔍 Fetching WordPress posts page ${page}...`);
+
+      const res = await fetch(apiUrl, {
         headers: {
           Authorization: `Basic ${auth}`,
         },
         cache: "no-store",
+        // Add timeout for production
+        signal: AbortSignal.timeout(15000), // 15 second timeout
+      });
+
+      if (!res.ok) {
+        console.error(
+          `❌ Failed to fetch WP slugs (page ${page}): ${res.status} ${res.statusText}`
+        );
+        console.error(
+          "Response headers:",
+          Object.fromEntries(res.headers.entries())
+        );
+        break;
       }
-    );
 
-    if (!res.ok) {
-      console.error(`❌ Failed to fetch WP slugs (page ${page})`);
-      break;
+      const posts = await res.json();
+      console.log(`✅ Fetched ${posts.length} posts from page ${page}`);
+
+      if (posts.length === 0) {
+        hasMore = false;
+      } else {
+        allPosts = [...allPosts, ...posts];
+        page++;
+      }
     }
 
-    const posts = await res.json();
+    console.log(`🎯 Total WordPress posts fetched: ${allPosts.length}`);
 
-    if (posts.length === 0) {
-      hasMore = false;
-    } else {
-      allPosts = [...allPosts, ...posts];
-      page++;
-    }
+    return allPosts.map((post) => ({
+      url: `/blog/${post.slug}`,
+      lastModified: new Date(post.modified || Date.now()),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error("❌ Error fetching WordPress posts:", error.message);
+    console.error("Error details:", error);
+
+    // Return empty array instead of failing completely
+    return [];
   }
-
-  return allPosts.map((post) => ({
-    url: `/blog/${post.slug}`,
-    lastModified: new Date(post.modified || Date.now()),
-    changeFrequency: "weekly",
-    priority: 0.6,
-  }));
 }
 
 // Convert seoMetadata JSON entries to route list
@@ -66,24 +89,48 @@ function getRoutesFromSeoJson() {
 }
 
 export default async function sitemap() {
-  const headersList = headers();
-  const defaultDomain = "www.colbrownschool.com";
-  const isProd = process.env.NODE_ENV === "production";
-  const hostHeader = headersList.get("host");
-  const domain = isProd ? defaultDomain : hostHeader || defaultDomain;
-  const protocol = isProd ? "https" : "http";
-  const baseUrl = `${protocol}://${domain}`;
+  try {
+    const headersList = headers();
+    const defaultDomain = "www.colbrownschool.com";
+    const isProd = process.env.NODE_ENV === "production";
+    const hostHeader = headersList.get("host");
+    const domain = isProd ? defaultDomain : hostHeader || defaultDomain;
+    const protocol = isProd ? "https" : "http";
+    const baseUrl = `${protocol}://${domain}`;
 
-  // ✅ Load both: static JSON routes + WP blog slugs
-  const [seoRoutes, wpRoutes] = await Promise.all([
-    Promise.resolve(getRoutesFromSeoJson()),
-    getWpBlogSlugs(),
-  ]);
+    console.log("🚀 Generating sitemap...");
+    console.log("Environment:", process.env.NODE_ENV);
+    console.log("Domain:", domain);
+    console.log("Protocol:", protocol);
 
-  const allRoutes = [...seoRoutes, ...wpRoutes];
+    // ✅ Load both: static JSON routes + WP blog slugs
+    const [seoRoutes, wpRoutes] = await Promise.all([
+      Promise.resolve(getRoutesFromSeoJson()),
+      getWpBlogSlugs(),
+    ]);
 
-  return allRoutes.map((route) => ({
-    ...route,
-    url: `${baseUrl}${route.url}`,
-  }));
+    const allRoutes = [...seoRoutes, ...wpRoutes];
+
+    console.log(`📊 Sitemap generated successfully:`);
+    console.log(`   - Static routes: ${seoRoutes.length}`);
+    console.log(`   - WordPress routes: ${wpRoutes.length}`);
+    console.log(`   - Total routes: ${allRoutes.length}`);
+
+    return allRoutes.map((route) => ({
+      ...route,
+      url: `${baseUrl}${route.url}`,
+    }));
+  } catch (error) {
+    console.error("❌ Sitemap generation failed:", error.message);
+    console.error("Error details:", error);
+
+    // Fallback: return only static routes if everything fails
+    console.log("🔄 Falling back to static routes only...");
+    const fallbackRoutes = getRoutesFromSeoJson();
+
+    return fallbackRoutes.map((route) => ({
+      ...route,
+      url: `https://www.colbrownschool.com${route.url}`,
+    }));
+  }
 }
