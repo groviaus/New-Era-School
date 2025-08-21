@@ -10,6 +10,10 @@ const nextConfig = {
       },
     ],
   },
+  // Force sitemap to be dynamic
+  experimental: {
+    sitemap: false, // Disable static sitemap generation
+  },
 };
 
 export default nextConfig;

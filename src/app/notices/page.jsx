@@ -48,7 +48,7 @@ function EntranceTestGuidelines() {
             <tr>
               <td className="py-2 px-4 text-center border-r border-gray-200">
                 {/* 07 December 2024 */}
-                Update you soon
+                18<sup>th</sup> October 2025
               </td>
               <td className="py-2 px-4 text-center border-r border-gray-200">
                 {/* 3:00 PM – 4:30 PM */}

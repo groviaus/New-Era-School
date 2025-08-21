@@ -131,6 +131,9 @@ function getRoutesFromSeoJson() {
 }
 
 export default async function sitemap() {
+  // Force regeneration every time
+  const timestamp = new Date().toISOString();
+
   try {
     const headersList = headers();
     const defaultDomain = "www.colbrownschool.com";
@@ -141,6 +144,7 @@ export default async function sitemap() {
     const baseUrl = `${protocol}://${domain}`;
 
     console.log("🚀 Generating sitemap...");
+    console.log("🚀 Timestamp:", timestamp);
     console.log("Environment:", process.env.NODE_ENV);
     console.log("Domain:", domain);
     console.log("Protocol:", protocol);
