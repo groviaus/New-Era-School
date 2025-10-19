@@ -56,14 +56,14 @@ const LegacyCBS = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/about/legacy-of-cbs", label: "About" },
-    { label: "Legacy CBS" },
+    { label: "Legacy NES" },
   ];
   return (
     <section className="overflow-hidden">
       <ImgAndBreadcrumb
-        title="Legacy of CBS"
-        imageSrc="/assets/academics/Campus.webp"
-        imageAlt="Description of the image"
+        title="Legacy of NES"
+        imageSrc="/assets/nes-assets/school.jpeg"
+        imageAlt="New Era School Campus"
         breadcrumbItems={breadcrumbItems}
       />
       <Container>
@@ -86,14 +86,14 @@ const AboutUs1 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8">
           <div>
             <h2 className="mb-0 text-4xl font-bold text-green-950 leading-tight md:text-end md:text-6xl md:leading-tight">
-              The School: A Legacy of Excellence Since 1926
+              The School: A Legacy of Excellence Since 1968
             </h2>
           </div>
           <div className="my-6 lg:px-4 lg:my-0">
             <div
               className="min-h-[500px]  bg-center rounded bg-cover bg-no-repeat"
               style={{
-                backgroundImage: `url(/assets/about/colonel-william-brown.jpg)`,
+                backgroundImage: `url(/assets/nes-assets/Dr_Saeed_Ansari.png)`,
               }}
             ></div>
           </div>
@@ -104,26 +104,27 @@ const AboutUs1 = () => {
             )}
           >
             <p className="mb-0 text-base leading-7 text-justify opacity-70">
-              Colonel Brown Cambridge School for Indian Boys is an English
-              Medium <strong>Residential School</strong> and is open to all boys
-              irrespective of caste, creed or social status. The school was
-              founded in the year 1926 by Col. William Brown, for Indian boys.
+              New Era School is a recognized unaided progressive English Medium
+              School that has come a long way since its inception in 1968. The
+              school has been recognized by DOE with School Id-1925454 wef
+              2024-25 and is open to all students irrespective of caste, creed
+              or social status.
             </p>
 
             <p className="mt-6 mb-0 text-base leading-7 text-justify opacity-70">
-              Affiliated to the ICSE Board of Education, the school ranks high
-              amongst educational institutions in India and is amongst the best
-              ICSE Schools in Dehradun.
+              The school is consistently maintaining its high standards &
+              increasing its strength year after year. The school is committed
+              to impart value based education to the students with a mission of
+              producing excellent human beings who can contribute towards the
+              progress of our Nation.
             </p>
             <p className="mt-6 mb-0 text-base leading-7 text-justify opacity-70">
-              The expansive school campus is set amidst lush green lychee and
-              mango orchards spanning across ninety bighas, in the peaceful and
-              pristine environs of Dalanwala – a posh area of Dehradun city.
-              Generations of boys have lived and passed through the imposing raj
-              era buildings on the campus and have gone on to lead across
-              various key fields in India and abroad. The school attracts
-              students not only from all parts of India, but also from across
-              the globe.
+              Founded by Dr. Saeed Ansari, an eminent educationist who
+              patronized the Nai Taleem Society, New Era School was established
+              with a vision to "Reach out and Help Others." The school offers a
+              stimulating environment with modern educational facilities
+              including CCTV cameras, a well-stocked library, and computer lab
+              equipped with the latest technology.
             </p>
           </div>
 
@@ -142,25 +143,25 @@ const AboutUs1 = () => {
 
 const features = [
   {
-    img: "/assets/academics/Campus.webp",
-    number: "1926",
-    title: "A Vision Takes Shape",
+    img: "/assets/nes-assets/school.jpeg",
+    number: "1968",
+    title: "Foundation of New Era School",
     description:
-      "In pursuit of educational reform, Col. Brown collaborated with Dr. Balbir Singh, a distinguished educator sharing his passion for quality education. Despite their strong individual perspectives and brief partnership, they parted ways amicably to pursue their distinct educational visions, laying the groundwork for what would become a prestigious institution.",
+      "Dr. Saeed Ansari, an eminent educationist of his time, patronized the Nai Taleem Society and established NEW ERA SCHOOL with a vision to 'Reach out and Help Others.' A man with great accomplishments to his credit, Dr. Ansari was one of the first generations of Jamia students who had joined Aligarh and later completed his post-graduation from Columbia University, USA.",
   },
   {
-    img: "/assets/about/dickhouse.webp",
-    number: "Dick House",
-    title: "Our First Home",
+    img: "/assets/nes-assets/Dr_Saeed_Ansari.png",
+    number: "Dr. Saeed Ansari",
+    title: "The Visionary Founder",
     description:
-      "In 1926, Col. William Brown and five pioneering students established the school at Dick House (No. 5 Dick Road). This historic property, formerly a thriving tea estate owned by Col. Dick, was situated in Dalanwala - a region renowned for its tea production. The area's rich agricultural heritage lives on through surviving tea gardens that dot the city's outskirts, offering glimpses into the school's storied beginnings.",
+      "Dr. Saeed Ansari (January 1904 – January 1984) completed his graduation from Jamia Millia Islamia where he later joined as a teacher. On his return to India in 1934, he was appointed as Principal of newly established USTADON KA MADARSA (Teachers Training College) of Jamia Millia Islamia. He also served as Dy. Director of Education, Delhi in 1960s and devoted his whole life in promotion of Basic Education in the country.",
   },
   {
-    img: "/assets/about/Since 1926.png",
-    number: "MAGNA EST VERITAS",
+    img: "/assets/nes-assets/logo.jpeg",
+    number: "REACH OUT HELP OTHERS",
     title: "Legacy of Excellence",
     description:
-      "Our school's foundation rests on timeless values embodied in our motto 'MAGNA EST VERITAS' (Truth is Great). Our distinctive crest tells our story: the lion representing unwavering courage, the Irish shamrock honoring our roots, and the torch symbolizing the eternal flame of knowledge. These elements continue to inspire and guide each generation of students toward excellence.",
+      "New Era School's foundation rests on timeless values embodied in our motto 'REACH OUT AND HELP OTHERS.' The school is committed to impart value-based education to students with a mission of producing excellent human beings who can contribute towards the progress of our Nation. Our educational programme is child-centered and activity-oriented, enabling children to relate to practical life.",
   },
 ];
 
@@ -176,7 +177,6 @@ const FeatureItem = ({ feature, index, isExpanded, onToggle }) => (
           src={feature.img}
           alt={feature.title}
           fill
-
           className="object-cover transition-all duration-300 hover:scale-110 -z-10"
         />
       </div>

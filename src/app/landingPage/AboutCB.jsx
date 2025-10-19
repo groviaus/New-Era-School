@@ -12,28 +12,29 @@ export default function AboutCB() {
                 About the Legacy of
               </span>
               <span className="block sm:text-5xl text-3xl font-serif font-semibold">
-                Col. Brown School
+                New Era School
               </span>
             </h2>
             {/* <div className="border-gray-300 h-10"/> </div> */}
             <p className="text-gray-600 leading-relaxed sm:text-xl text-justify">
-              Colonel Brown Cambridge School was established in March 1926 by
-              Col. William Brown and Mrs. Brown for Indian boys. It is an
-              English medium residential school, welcoming all boys regardless
-              of caste, creed, or social status.
+              New Era School was established in 1968 by Dr. Saeed Ansari, an
+              eminent educationist who patronized the Nai Taleem Society. It is
+              a recognized unaided progressive English Medium School that
+              welcomes all students regardless of caste, creed, or social
+              status.
             </p>
             <p className="text-gray-600 leading-relaxed sm:text-xl text-justify">
-              The school holds a prestigious place among educational
-              institutions in India, being one of the top ICSE boarding schools
-              in Dehradun. It attracts students not only from across India but
-              also from around the world.
+              The school has been recognized by DOE with School Id-1925454 wef
+              2024-25 and is consistently maintaining its high standards &
+              increasing its strength year after year. The school is committed
+              to impart value based education to the students.
             </p>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
               <Image
                 src="/assets/landing/video.webp"
-                alt="Aerial view of Col. Brown School campus"
+                alt="Aerial view of New Era School campus"
                 fill
                 className="object-cover"
               />

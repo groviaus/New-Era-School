@@ -14,7 +14,7 @@ const HeroBanner = () => {
       <div
         className="absolute inset-0 bg-cover bg-center sm:bg-center"
         style={{
-          backgroundImage: `url(/assets/about/message-banner.jpg)`,
+          backgroundImage: `url(/assets/nes-assets/school.jpeg)`,
         }}
       ></div>
       <div className="relative z-10 max-w-4xl mx-auto px-4 bg-black/50 py-5 sm:py-10">
@@ -24,7 +24,7 @@ const HeroBanner = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-2xl sm:text-6xl font-semibold mb-4"
         >
-          A Legacy of Vision: The Founders of CBS
+          A Legacy of Vision: The Founders of NES
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -32,8 +32,8 @@ const HeroBanner = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-lg sm:text-2xl mb-4 sm:mb-8"
         >
-          Celebrating the journey of Colonel William Brown and Mrs. Brown in
-          shaping generations since 1926.
+          Celebrating the journey of Dr. Saeed Ansari and the Ansari family in
+          shaping generations since 1968.
         </motion.p>
         <motion.div
           initial={{ y: 20, opacity: 0 }}

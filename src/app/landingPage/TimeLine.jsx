@@ -6,52 +6,52 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const timelineData = {
-  1920: {
-    year: "1926",
-    title: "A Journey Through Time",
+  1968: {
+    year: "1968",
+    title: "Foundation of New Era School",
     description:
-      "Col Brown has been a pivotal institution in education for a century. Join us in honoring our rich history and the significant events that have shaped our community.",
-    image: "/assets/landing/nineteen-thirties-2.webp",
-  },
-  1950: {
-    year: "1950",
-    title: "Era of Innovation",
-    description:
-      "The 1950s ushered in a transformative phase for our school, marked by growth and advancements that set the stage for future success.",
-    image: "/assets/landing/fifty-sixties-2.webp",
-  },
-  1960: {
-    year: "1960",
-    title: "Embracing Change",
-    description:
-      "The 1960s brought a wave of modernization, introducing innovative teaching methods and enhancing our facilities to better serve our students.",
-    image: "/assets/landing/1960.webp",
+      "Dr. Saeed Ansari, an eminent educationist, patronized the Nai Taleem Society and established NEW ERA SCHOOL with a vision to 'Reach out and Help Others.'",
+    image: "/assets/landing/nes-history-1968.png",
   },
   1970: {
-    year: "1970",
-    title: "Expanding Horizons",
+    year: "1970s",
+    title: "Era of Growth",
     description:
-      "During the 1970s, we broadened our influence through international collaborations and diverse educational initiatives.",
-    image: "/assets/landing/1973-1974.webp",
+      "The 1970s marked significant growth under Dr. Saeed Ansari's leadership, establishing the school's reputation for value-based education and academic excellence.",
+    image: "/assets/landing/nes-history-1970s.png",
+  },
+  1980: {
+    year: "1980s",
+    title: "Expanding Vision",
+    description:
+      "During the 1980s, the school continued to grow and develop its educational programs, maintaining high standards and increasing student strength year after year.",
+    image: "/assets/landing/nes-history-1980s.png",
   },
   1990: {
-    year: "1990",
-    title: "Global Outreach",
+    year: "1990s",
+    title: "Leadership Transition",
     description:
-      "The 1990s marked a significant expansion of our global partnerships, enriching our educational programs and community engagement.",
-    image: "/assets/landing/1990.webp",
+      "The 1990s brought leadership transition as Mr. Mahmood Saeed Ansari and Mrs. Shamroz Ansari took over, continuing the founder's vision and mission.",
+    image: "/assets/landing/nes-history-1990s.png",
   },
   2000: {
-    year: "2000",
-    title: "A New Millennium",
+    year: "2000s",
+    title: "Modern Development",
     description:
-      "Entering the 2000s, we continued to strengthen our global connections and enhance our educational offerings for a diverse student body.",
-    image: "/assets/landing/teacher-day-2019.jpg",
+      "Entering the 2000s, New Era School continued to modernize its facilities and enhance its educational offerings, maintaining its commitment to child-centered learning.",
+    image: "/assets/landing/nes-history-2000s.png",
+  },
+  2020: {
+    year: "2020s",
+    title: "DOE Recognition",
+    description:
+      "The 2020s brought official recognition from the Department of Education with School ID-1925454, marking a new milestone in the school's journey of excellence.",
+    image: "/assets/landing/nes-history-2020s.png",
   },
 };
 
 export default function Timeline() {
-  const [selectedYear, setSelectedYear] = useState(1920);
+  const [selectedYear, setSelectedYear] = useState(1968);
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef(null);
   const sectionRef = useRef(null);

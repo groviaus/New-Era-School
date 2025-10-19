@@ -15,18 +15,27 @@ import Image from "next/image";
 const achievementsData = {
   education: {
     content:
-      "Colonel Brown's approach to education was revolutionary for its time. He believed in equal opportunities for all students, regardless of their background.",
-    images: ["/assets/academics/Smart Classrooms.jpg", "/assets/about/Education.webp"],
+      "Dr. Saeed Ansari's approach to education was revolutionary for its time. He believed in value-based education and equal opportunities for all students, regardless of their background. The school is committed to impart value-based education to students with a mission of producing excellent human beings.",
+    images: [
+      "/assets/nes-assets/gallery (1).jpeg",
+      "/assets/nes-assets/gallery (2).jpeg",
+    ],
   },
-  preIMA: {
+  recognition: {
     content:
-      "CBS has a long-standing tradition of preparing students for the Indian Military Academy. Our rigorous training program has produced numerous successful candidates.",
-    images: ["/assets/about/military1.webp", "/assets/about/military2.webp"],
+      "New Era School has been recognized by the Department of Education with School ID-1925454 wef 2024-25. The school is consistently maintaining its high standards and increasing its strength year after year, earning considerable appreciation for providing value-based education.",
+    images: [
+      "/assets/nes-assets/school.jpeg",
+      "/assets/nes-assets/gallery (3).jpeg",
+    ],
   },
-  sports: {
+  facilities: {
     content:
-      "Sports have always been an integral part of CBS. Our proudest achievement is winning the All India Hockey Championship, showcasing the school's commitment to athletic excellence.",
-    images: ["/assets/about/Sports (1).webp", "/assets/about/Sports (2).webp"],
+      "NES has an attractive new building with all modern educational facilities. It offers a stimulating environment with CCTV cameras, a big library stocked with specially selected books, and a computer lab equipped with the latest computers providing computer education from std 1.",
+    images: [
+      "/assets/nes-assets/gallery (4).jpeg",
+      "/assets/nes-assets/gallery (5).jpeg",
+    ],
   },
 };
 
@@ -42,8 +51,8 @@ const AchievementsSection = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-3 bg-gray-200">
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="preIMA">Pre-IMA</TabsTrigger>
-            <TabsTrigger value="sports">Sports</TabsTrigger>
+            <TabsTrigger value="recognition">Recognition</TabsTrigger>
+            <TabsTrigger value="facilities">Facilities</TabsTrigger>
           </TabsList>
           {Object.entries(achievementsData).map(
             ([key, { content, images }]) => (

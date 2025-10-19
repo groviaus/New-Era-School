@@ -109,7 +109,7 @@ export default function AboutCBB() {
               >
                 <LazyLoadYouTube
                   videoId="mZdDi62XFgU"
-                  title="Col. Brown School Video"
+                  title="New Era School Video"
                 />
               </motion.div>
             </div>
@@ -145,7 +145,7 @@ export default function AboutCBB() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Col. Brown School
+                New Era School
               </motion.h2>
               <motion.p
                 className="mb-5 text-lg text-body-color dark:text-dark-6 text-justify"
@@ -154,10 +154,9 @@ export default function AboutCBB() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                Colonel Brown Cambridge School was established in March 1926 by
-                Col. William Brown for Indian boys. It is an English medium
-                residential school, welcoming all boys regardless of caste,
-                creed, or social status.
+                New Era School, recognized unaided progressive English Medium
+                School has come a long way since its inception. The school has
+                been recognized by DOE with School Id-1925454 wef 2024-25.
               </motion.p>
               <motion.p
                 className="mb-8 text-lg text-body-color dark:text-dark-6 text-justify"
@@ -166,10 +165,11 @@ export default function AboutCBB() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                The school holds a prestigious place among educational
-                institutions in India, being one of the top ICSE boarding
-                schools in Dehradun. It attracts students not only from across
-                India but also from around the world.
+                The school is consistently maintaining its high standards &
+                increasing its strength year after year. The school is committed
+                to impart value based education to the students with a mission
+                of producing excellent human beings who can contribute towards
+                the progress of our Nation.
               </motion.p>
               <Link
                 href="/about/our-visionary-leaders"

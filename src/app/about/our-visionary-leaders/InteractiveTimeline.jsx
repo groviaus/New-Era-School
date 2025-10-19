@@ -6,26 +6,28 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const timelineData = [
   {
-    year: 1926,
-    event: "Founding of CBS",
+    year: 1968,
+    event: "Foundation of New Era School",
     description:
-      "Colonel William Brown establishes the Colonel Brown Cambridge School.",
+      "Dr. Saeed Ansari establishes New Era School with a vision to 'Reach out and Help Others.'",
   },
   {
-    year: 1927,
-    event: "First hockey championship win",
-    description: "CBS wins its first All India Hockey Championship.",
-  },
-  {
-    year: 1935,
-    event: "Introduction of pre-IMA classes",
+    year: 1970,
+    event: "Era of Growth",
     description:
-      "CBS begins preparing students for the Indian Military Academy.",
+      "The 1970s marked significant growth under Dr. Saeed Ansari's leadership, establishing the school's reputation for value-based education.",
   },
   {
-    year: 1942,
-    event: "Passing of Col. Brown",
-    description: "Colonel William Brown passes away, leaving a lasting legacy.",
+    year: 1984,
+    event: "Leadership Transition",
+    description:
+      "After Dr. Saeed Ansari's passing, Mr. Mahmood Saeed Ansari & Mrs. Shamroz Ansari take over the school's leadership.",
+  },
+  {
+    year: 2024,
+    event: "DOE Recognition",
+    description:
+      "New Era School receives official recognition from the Department of Education with School ID-1925454.",
   },
 ];
 
@@ -33,7 +35,9 @@ const TimelineItem = ({ item, isActive, onClick }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     className={`cursor-pointer  ${
-      isActive ? "sm:bg-primary text-primary-foreground bg-gray-900" : "sm:bg-background"
+      isActive
+        ? "sm:bg-primary text-primary-foreground bg-gray-900"
+        : "sm:bg-background"
     }`}
     onClick={onClick}
   >
@@ -53,7 +57,9 @@ const InteractiveTimeline = () => {
   return (
     <section className="py-16 bg-gray-800">
       <div className="md:max-w-7xl container mx-auto px-4">
-        <h2 className="text-4xl text-white font-semibold mb-8 text-center">Timeline of Excellence</h2>
+        <h2 className="text-4xl text-white font-semibold mb-8 text-center">
+          Timeline of Excellence
+        </h2>
         <div className="relative">
           <div
             ref={timelineRef}

@@ -30,7 +30,7 @@ export default function Spotlight() {
                 >
                   <Image
                     src="/assets/landing/spotlight.webp"
-                    alt="Aerial view of Col. Brown School campus"
+                    alt="Aerial view of New Era School campus"
                     fill
                     className="object-contain"
                   />
@@ -68,7 +68,7 @@ export default function Spotlight() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  Col Brown School Alumni
+                  New Era School Excellence
                 </motion.span>
               </motion.h2>
 
@@ -79,10 +79,10 @@ export default function Spotlight() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Colonel Brown Cambridge School was founded in March 1926 by Col.
-                William Brown, specifically for Indian boys. This institution is
-                an English medium residential school that embraces all boys,
-                irrespective of their caste, creed, or social status.
+                Dr. Saeed Ansari, a man with great accomplishments to his
+                credit, an eminent educationist of his time patronized the Nai
+                Taleem Society in 1968 and established NEW ERA SCHOOL with a
+                vision to "Reach out and Help Others."
               </motion.p>
 
               <motion.p
@@ -92,10 +92,10 @@ export default function Spotlight() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                The school is renowned among educational institutions in India,
-                recognized as one of the premier ICSE boarding schools in
-                Dehradun. It draws students not only from various parts of India
-                but also from across the globe.
+                The school is recognized by DOE with School Id-1925454 wef
+                2024-25 and is consistently maintaining its high standards &
+                increasing its strength year after year. The school is committed
+                to impart value based education to the students.
               </motion.p>
             </motion.div>
           </div>

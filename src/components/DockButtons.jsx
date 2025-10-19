@@ -50,7 +50,7 @@ export function DockButtons() {
 
 const Icons = {
   home: (props) => (
-      <Link href="/">
+    <Link href="/">
       <svg
         {...props}
         xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const Icons = {
     </Link>
   ),
   call: (props) => (
-    <a href="tel:+916395114363">
+    <a href="tel:+919958715277">
       <svg
         {...props}
         xmlns="http://www.w3.org/2000/svg"
@@ -90,13 +90,11 @@ const Icons = {
       </svg>
     </a>
   ),
-  hamburger: (props) => (
-     <DrawerDock  {...props}/>
-    ),
+  hamburger: (props) => <DrawerDock {...props} />,
 
   whatsapp: (props) => (
     <a
-      href="https://wa.me/916395114363"
+      href="https://wa.me/919958715277"
       target="_blank"
       rel="noopener noreferrer"
     >

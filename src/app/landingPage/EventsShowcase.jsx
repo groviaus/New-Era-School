@@ -26,7 +26,8 @@ const EventsShowcase = () => {
             Latest & Upcoming Event
           </h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-white/90">
-            An evening of melodies—Suron Ka Sangam brings the campus alive.
+            An evening of melodies—Suron Ka Sangam brings the New Era School
+            campus alive.
           </p>
         </div>
 

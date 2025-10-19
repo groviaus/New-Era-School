@@ -34,14 +34,20 @@ export default function Header() {
       <TopBar />
       <div className="sm:container md:max-w-6xl lg:max-w-[1400px]  mx-auto py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="flex flex-col items-start">
+          <a href="/" className="flex items-center space-x-4">
             <Image
-              src="/assets/logo.png"
-              alt="Col Brown Cambridge School"
-              width={280}
-              height={64}
-              className="object-contain p-2 rounded-md h-16"
+              src="/assets/nes-assets/logo.jpeg"
+              alt="New Era School"
+              width={80}
+              height={80}
+              className="object-contain rounded-md"
             />
+            <div className="flex flex-col">
+              <h1 className="text-2xl font-bold text-gray-800 leading-tight">
+                NEW ERA SCHOOL
+              </h1>
+              <p className="text-sm text-gray-600 font-medium">Estd. 1968</p>
+            </div>
           </a>
           <MainNav />
           <Drawer />

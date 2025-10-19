@@ -9,22 +9,23 @@ import Link from "next/link";
 
 export default function SchoolEvents() {
   const newsItems = [
-  
     {
       date: "AUGUST 11, 2025",
-      title: "MUFC, Col Brown School score wins in St George's College Heritage Cup",
+      title:
+        "MUFC, New Era School score wins in St George's College Heritage Cup",
       image: "/assets/beyond-classroom/news-events/news/news_soccer3.jpg",
       type: "NEWS",
     },
     {
-      date: "AUGUST 11, 2025", 
+      date: "AUGUST 11, 2025",
       title: "St George's College Heritage Cup enters semi-final stage",
       image: "/assets/beyond-classroom/news-events/news/news_soccer2.jpg",
       type: "NEWS",
     },
     {
       date: "AUGUST 1, 2025",
-      title: "St George's Heritage Cup begins; CBS wins on penalties after 4–4 draw",
+      title:
+        "St George's Heritage Cup begins; NES wins on penalties after 4–4 draw",
       image: "/assets/beyond-classroom/news-events/news/news_soccer1.jpg",
       type: "NEWS",
     },
@@ -41,7 +42,7 @@ export default function SchoolEvents() {
       date: { day: "15", month: "AUG" },
       title: "Suron Ka Sangam – Music Workshop",
       year: "2025",
-      location: "Col. Brown Cambridge School",
+      location: "New Era School",
       description:
         "Music workshop by Pt. Vishwanath Ji and Pt. Rajendra Prasad Banarjee. 15–17 August 2025, 10:30 AM to 12:30 PM.",
     },
@@ -55,11 +56,11 @@ export default function SchoolEvents() {
     },
     {
       date: { day: "5", month: "APR" },
-      title: "Farewell Party Report for Class 12th at Col. Brown Cambridge",
+      title: "Farewell Party Report for Class 12th at New Era School",
       year: "2024",
-      location: "Col. Brown Cambridge School",
+      location: "New Era School",
       description:
-        "The farewell party for the Class 12th students of Col. Brown Cambridge School was held on January 25, 2024",
+        "The farewell party for the Class 12th students of New Era School was held on January 25, 2024",
     },
     // {
     //   date: { day: "19", month: "FEB" },
@@ -73,17 +74,17 @@ export default function SchoolEvents() {
   const pastEvents = [
     {
       date: { day: "31", month: "OCT" },
-      title: "CBS'MUN Report 2023",
+      title: "NES'MUN Report 2023",
       year: "2023",
-      location: "Col. Brown Cambridge School",
+      location: "New Era School",
       description:
-        "It is a great pleasure to bring a report of the second edition of CBS'MUN 2023.",
+        "It is a great pleasure to bring a report of the second edition of NES'MUN 2023.",
     },
     {
       date: { day: "2", month: "OCT" },
       title: "Butterfly Walk",
       year: "2023",
-      location: "Col. Brown Cambridge School",
+      location: "New Era School",
       description:
         "On 2nd October 2023, the School organized a programme of Biodiversity. Mr. Sanjai Sondhi graced the occasion.",
     },
@@ -91,7 +92,7 @@ export default function SchoolEvents() {
       date: { day: "1", month: "OCT" },
       title: "SUPW Activity",
       year: "2023",
-      location: "Col. Brown Cambridge School",
+      location: "New Era School",
       description: "Details about the SUPW activity will be provided soon.",
     },
   ];

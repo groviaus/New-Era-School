@@ -19,18 +19,20 @@ const VisionaryCouple = () => {
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl font-semibold mb-4">The Visionary Leader</h2>
+            <h2 className="text-4xl font-semibold mb-4">
+              The Visionary Leader
+            </h2>
             <p className="mb-4">
-              Colonel William Brown embarked on a remarkable
-              journey in 1926, founding the Colonel Brown Cambridge School.
-              Their vision of providing quality education and shaping young
-              minds has left an indelible mark on generations of students.
+              Dr. Saeed Ansari embarked on a remarkable journey in 1968,
+              founding the New Era School. His vision of providing value-based
+              education and shaping young minds has left an indelible mark on
+              generations of students.
             </p>
             <p className="mb-4">
-              Their commitment to excellence and equality in education set the
-              foundation for what CBS represents today. The Browns believed in
-              nurturing not just academic prowess, but also character and
-              values.
+              His commitment to excellence and equality in education set the
+              foundation for what NES represents today. Dr. Ansari believed in
+              nurturing not just academic prowess, but also character and values
+              through the mission "Reach out and Help Others."
             </p>
           </motion.div>
           <motion.div
@@ -42,13 +44,15 @@ const VisionaryCouple = () => {
             <div className="text-center">
               <div className="relative w-96 h-96 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/assets/about/colonel-william-brown.jpg"
-                  alt="Colonel William Brown"
+                  src="/assets/nes-assets/Dr_Saeed_Ansari.png"
+                  alt="Dr. Saeed Ansari"
                   fill
                   className="rounded-lg"
                 />
               </div>
-              <p className="mt-2 font-semibold text-muted-foreground">Colonel William Brown</p>
+              <p className="mt-2 font-semibold text-muted-foreground">
+                Dr. Saeed Ansari
+              </p>
             </div>
           </motion.div>
         </div>
@@ -59,7 +63,7 @@ const VisionaryCouple = () => {
           className="mt-12 text-center"
         >
           <blockquote className="text-2xl font-handwriting text-gray-700">
-            "Truth is Great – A foundation for generations."
+            "Reach out and Help Others – A foundation for generations."
           </blockquote>
         </motion.div>
       </div>

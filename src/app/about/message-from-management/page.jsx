@@ -55,23 +55,34 @@ export default MessageFromManagement;
 const leadershipData = [
   {
     id: 1,
-    name: "Ms. Indubala Singh",
-    position: "Proctor",
-    image: "/assets/about/management/rani-indubala-singh.webp",
-    message: `The Proctor Mrs.Indu Bala Singh is a dynamic and compassionate lady, who expertly balances administration acumen with a warm child-centered approach.
+    name: "Mrs. Hina Adnan",
+    position: "Head Mistress",
+    image: "/assets/nes-assets/Hina_Adnan.png",
+    message: `Education is a lifelong process and it begins at school. The purpose of education is to broaden a child's perspective and deepen the understanding of the world. Every child is a unique individual. Today, the role of the school is not only to pursue academic excellence but also to motivate and empower its students to be lifelong learners, critical thinkers, and productive members of an ever changing global society.
 
-As a seasoned educator and skilled administrator she has earned the respect A and admiration of both staff and students alike.
+I feel proud to express that the school is moving towards excellence in all the aspects to ensure academic and human excellence with the blessings of Almighty Allah. I pray to Allah that our journey towards progress continues. "Everything that is done in the world is done by hope". As Educators we also ignite hope in the students to explore and fulfill their potentials.
 
-A firm believer in the importance of holistic development, she encourages our students to excel not only academically but also in sports and extracurricular activities. She fosters a spirit of friendly competition and teamwork in our children.
+With warm regards and good wishes,
 
-Under her expert guidance the school is thriving and our students are growing to be confident, well rounded individuals`,
+Hina Adnan`,
   },
   {
     id: 2,
-    name: "Mr. S.K. Tyagi",
-    position: "Headmaster",
-    image: "/assets/about/management/sk-tyagi.webp",
-    message: `Our Headmaster Mr.S.K.Tyagi, is an esteemed member of the educational fraternity, a committed teacher, a pillar of strength and a driving force behind the school's growth and success. A visionary educator, he is always looking towards the future, seeking innovative and forward-looking schemes to enrich the educational experience of our children. His tireless efforts to stay ahead of the curve has enabled our school to remain at the very forefront of educational excellence. This reflects not just in the children's educational endeavours but also in the various co-curricular and extra-curricular activities that they participate in.`,
+    name: "Mrs. Shamroz Ansari",
+    position: "Owner & Director",
+    image: "/assets/nes-assets/Shamroz_Ansari.jpeg",
+    message: `The backbone of New Era School, Mrs. Shamroz Ansari is a true visionary in all respects right from infrastructure to academic achievements. Her contribution in the activities of the school is par excellence. The support provided by her in the day to day activities of the school deserves a special mention. Without mentioning her contribution, the vision of school is incomplete.
+
+She has played a pivotal role in maintaining the high standards of the school and ensuring that the vision of Dr. Saeed Ansari continues to guide the institution. Her dedication to providing value-based education and creating an environment that nurtures young minds has been instrumental in the school's success and recognition by the Department of Education.`,
+  },
+  {
+    id: 3,
+    name: "Mr. Mahmood Ansari",
+    position: "Owner & Director",
+    image: "/assets/nes-assets/Mahmood_Ansari.jpeg",
+    message: `Mahmood Saeed Ansari has played a pivotal role in the school activities after the death of his father, Dr. Saeed Ansari. He has seen the school grow with him. His tireless effort has reaped fruit and the school has received recognition from the DOE. The fraternity of NES always looks up to him for guidance and support. His mentorship is a boon to the school.
+
+Under his leadership, New Era School has continued to maintain its high standards and increase its strength year after year. His commitment to the school's mission of "Reach out and Help Others" ensures that the institution remains true to its founding principles while adapting to modern educational needs.`,
   },
 ];
 
@@ -79,9 +90,9 @@ const LeadershipMessage = () => {
   const [openDrawer, setOpenDrawer] = useState(null);
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl">
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

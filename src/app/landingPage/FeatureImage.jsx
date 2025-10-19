@@ -11,25 +11,25 @@ const FeatureImage = () => {
   const data = [
     {
       title: "Boarding Life",
-      image: "/assets/landing/landing-boarding.webp",
+      image: "/assets/nes-assets/gallery (3).jpeg",
       path: "/boarding-life/overview",
       icon: <School className="w-6 h-6 text-white" />,
     },
     {
       title: "Academics",
-      image: "/assets/landing/academics.webp",
+      image: "/assets/nes-assets/gallery (4).jpeg",
       path: "/academics/curriculum",
       icon: <BookOpen className="w-6 h-6 text-white" />,
     },
     {
       title: "Sports",
-      image: "/assets/landing/sports.webp",
+      image: "/assets/nes-assets/gallery (5).jpeg",
       path: "/boarding-life/sports-at-cbs",
       icon: <Volleyball className="w-6 h-6 text-white" />,
     },
     {
       title: "Co-Curricular",
-      image: "/assets/landing/co-curricular.webp",
+      image: "/assets/nes-assets/gallery (6).jpeg",
       path: "/beyond-classroom/clubs-at-cbs",
       icon: <ClipboardList className="w-6 h-6 text-white" />,
     },

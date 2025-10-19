@@ -80,8 +80,8 @@ export default function Footer() {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src="/assets/logo.png"
-                  alt="Col Brown Cambridge School"
+                  src="/assets/nes-assets/logo.jpeg"
+                  alt="New Era School"
                   width={200}
                   height={60}
                   className="bg-white p-2"
@@ -95,7 +95,7 @@ export default function Footer() {
               transition={{ delay: 0.3 }}
             >
               <Link
-                href="https://www.google.com/maps/place/Col.+Brown+Cambridge+School/@30.322328,78.056969,1446m/data=!3m1!1e3!4m6!3m5!1s0x390929b641fd13a5:0xf2f0dda3f2210a65!8m2!3d30.3223276!4d78.0569688!16s%2Fm%2F0bmjr27?hl=en&entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
+                href="https://www.google.com/maps/search/261,+Jamia+Nagar+Noor+Nagar+Road,+New+Delhi-110025"
                 target="_blank"
               >
                 <motion.p
@@ -103,21 +103,21 @@ export default function Footer() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  5 Kasturba Road, Dalanwala
+                  261, Jamia Nagar Noor Nagar Road
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  Dehradun – 248 001
+                  New Delhi – 110025
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  Uttarakhand, India
+                  India
                 </motion.p>
               </Link>
               <motion.p
@@ -127,11 +127,11 @@ export default function Footer() {
                 transition={{ delay: 0.7 }}
               >
                 <a
-                  href="tel:+916395114363"
+                  href="tel:+919958715277"
                   className="hover:text-white transition-colors inline-flex items-center group"
                 >
                   <motion.span className="inline-block w-0 group-hover:w-2 h-[1px] bg-white mr-0 group-hover:mr-2 transition-all duration-300" />
-                  Admission Helpline: +91 63951 14363
+                  Admission Helpline: +91 99587 15277
                 </a>
               </motion.p>
               <motion.p
@@ -192,7 +192,7 @@ export default function Footer() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              © Col. Brown Cambridge School 2025. All&nbsp;
+              © New Era School 2025. All&nbsp;
               <a
                 href="https://www.thedesignvillage.org/"
                 target="_blank"

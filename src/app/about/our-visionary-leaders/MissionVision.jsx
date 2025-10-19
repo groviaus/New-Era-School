@@ -22,10 +22,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 // import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 const MissionVision = () => {
-  
   return (
     <section>
-      
       {/* <Container> */}
       {/* <Heading
             title="Our Mission and Vision"
@@ -64,42 +62,32 @@ export default MissionVision;
 const leadershipData = [
   {
     id: 1,
-    name: "Col. T.F.O' Donnell",
-    position: "Principal",
-    image: "/assets/about/management/dr-t-f-o-donnell.webp",
-    message: `Within a year or so Col. T.F. O'Donnell took over the school and the Cleaves left for Ireland. Col. T.F. O'Donnell carried on the good work. He was an erudite scholar and was partial toward literary writing which consumed most of his time. He wrote and published many books, some of which were taught in schools around the country. Two of his well-known works, "The Adventures of an SP" and "Cockpit of the East" are major literary works. The original manuscripts are preserved and kept in the library.
+    name: "Dr. Saeed Ansari",
+    position: "Founder",
+    image: "/assets/nes-assets/Dr_Saeed_Ansari.png",
+    message: `Dr. Saeed Ansari, a man with great accomplishments to his credit, an eminent educationist of his time patronized the Nai Taleem Society in 1968 and established NEW ERA SCHOOL with a vision to "Reach out and Help Others."
 
-    The Second World War (1939 to 1945) saw the alumni of the school in action in Africa, Europe and the South East. With the end of the war, the political climate of the country started changing rapidly with the partition in 1947. The school suffered its 1st major blow as friends were ripped apart, for approximately 40% of the boys left to become the citizens of the newly formed State of Pakistan. The school saw gradual changes both in the staff and the students; by 1960 Mrs. 0′ Donnell, Mr. McIntosh the Vice-Principal and Col. 0'Donnell passed away; and by 1965 none of the European staff was left.`,
+    (Late) Dr. Saeed Ansari was one of the first generations of Jamia students who had joined Aligarh. He completed his graduation from Jamia Millia Islamia where he later joined as a teacher. After spending a few years here, he went to Columbia University U.S.A for obtaining his post-graduation.
+
+    On his return to India in 1934, he was appointed as Principal of newly established USTADON KA MADARSA (Teachers Training College) of Jamia Millia Islamia. He also served as Dy. Director of Education, Delhi in 1960s. He devoted his whole life in promotion of Basic Education in the country.`,
   },
-  // {
-  //   id: 2,
-  //   name: "Subedar Bhagwat Singh",
-  //   position: "Bursar",
-  //   image:
-  //     "https://cbs.edustoke.com/wp-content/uploads/2024/11/subedar-bhagwat-singh.jpg",
-  //   message: `Great contribution to the school was made by Kenneth Henry McIntosh, the Vice-Principal and in-charge of senior classes. It is to his credit that he inculcated in his students a love and interest for most co-curricular activities. Besides teaching English, he was the soft side of discipline and was the major balancing factor in a highly regimented school.
-
-  //   After his death, his sister Dora McIntosh, Head Mistress of the Preparatory Department, migrated and settled down in Surrey. In 1958 Col. T.F. O'Donnell and the managing committee of the school appointed Mr. Narendra Singh as the Vice-Principal. Mr. Narendra Singh had joined the school in 1937. Earlier Subedar Bhagwat Singh had joined in 1935 as assistant to Cleave and became the Bursar in the forties after Major Cleave left, and remained so till his death in August 1960.`,
-  // },
   {
     id: 2,
-    name: "Mr. Narendra Singh",
-    position: "Principal",
-    image: "/assets/about/management/narender-singh.webp",
-    message: `With the death of Col. O'Donnell on 26th January 1960, the administration of the school was held by an Indian since Mr. Narendra Singh had already taken over as the Principal because of the Colonel's failing health. Both Subedar Bhagwat Singh and Narendra Singh had served in the Army together and were keen sportsmen. Mr. Narendra Singh studied at BHU from where he took his Masters in English.
+    name: "Mrs. Shamroz Ansari",
+    position: "Owner & Director",
+    image: "/assets/nes-assets/Shamroz_Ansari.jpeg",
+    message: `The backbone of New Era School, Mrs. Shamroz Ansari is a true visionary in all respects right from infrastructure to academic achievements. Her contribution in the activities of the school is par excellence. The support provided by her in the day to day activities of the school deserves a special mention. Without mentioning her contribution, the vision of school is incomplete.
 
-    An excellent player and an avid fan of hockey, he was known to promote the sport both in school and U.P. A stickler for discipline, he believed in the ancient adage- 'Spare the rod and spoil the child'. Many old students 'fondly' remember that.`,
+    She has played a pivotal role in maintaining the high standards of the school and ensuring that the vision of Dr. Saeed Ansari continues to guide the institution. Her dedication to providing value-based education and creating an environment that nurtures young minds has been instrumental in the school's success and recognition by the Department of Education.`,
   },
   {
     id: 3,
-    name: "Mr. Abhai Singh",
-    position: "Principal",
-    image: "/assets/about/management/abhy-singh.webp",
-    message: `It would be unfair to the school motto, 'Truth is Great ', not to report that for reasons beyond comprehension the school progress did not only come to a stand-still but over the next fifteen years witnessed a slide backwards.
+    name: "Mr. Mahmood Ansari",
+    position: "Owner & Director",
+    image: "/assets/nes-assets/Mahmood_Ansari.jpeg",
+    message: `Mahmood Saeed Ansari has played a pivotal role in the school activities after the death of his father, Dr. Saeed Ansari. He has seen the school grow with him. His tireless effort has reaped fruit and the school has received recognition from the DOE. The fraternity of NES always looks up to him for guidance and support. His mentorship is a boon to the school.
 
-    The school went through very dark and trying times from 1969 to 1976, when the process of regeneration was set in motion. In 1976, Mr. Abhai Singh took over the reins of C.B.S. on his return from Canada after the death of Mr. Narendra Singh. An ex-Brownian, well-travelled, a keen sportsman, a voracious reader and a strong believer in the dignity of human labour, Mr. Abhai Singh's task was not an easy one. It is to his credit that he modernised living facilities for the boys and staff alike: he restructured the Dining Hall, the Library, and the Computer Lab; constructed new and better hostels like Ireland House, Patel House, Col. House, White House, Kitchner Block, and McIntosh House; created an open-air theatre: the Tamarind Theatre; and added underground water tanks to resolve the perennial water shortages.
-
-    In order to protect his identity and to keep up with the changing times, new sets of clothes have been issued to the boys to be worn on different occasions. The boys just love their CBS T-shirts. In all the changes that have taken place, academics is given due importance. A dedicated competent staff helps the school achieve 100% result each year.`,
+    Under his leadership, New Era School has continued to maintain its high standards and increase its strength year after year. His commitment to the school's mission of "Reach out and Help Others" ensures that the institution remains true to its founding principles while adapting to modern educational needs.`,
   },
 ];
 

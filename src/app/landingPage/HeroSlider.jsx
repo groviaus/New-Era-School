@@ -3,8 +3,8 @@ import { useState, useEffect, memo, Suspense } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-const img1 = "/assets/landing/bg1.webp";
-const img2 = "/assets/boarding-life/PastoralCare-banner.jpg";
+const img1 = "/assets/nes-assets/gallery (1).jpeg";
+const img2 = "/assets/nes-assets/gallery (2).jpeg";
 // import img1Small from "../../assets/landing/bg1-small.webp";
 // import img2Small from "../../assets/boarding-life/PastoralCare-banner-small.jpg";
 
@@ -60,17 +60,17 @@ const HeroSlider = () => {
     {
       image: img1,
       imageSmall: img1,
-      tagline: "Give your Dreams wings to fly",
+      tagline: "Empowering Young Future Legends",
       highlights: [
-        "World-class curriculum",
-        "Experienced faculty",
-        "State-of-the-art classrooms",
+        "Value-based education",
+        "Child-centered learning",
+        "Modern facilities",
       ],
     },
     {
       image: img2,
       imageSmall: img2,
-      tagline: "Celebrate Every Special Moment",
+      tagline: "Reach Out Help Others",
       highlights: [
         "Cultural festivals",
         "Workshops",

@@ -8,7 +8,7 @@ import Link from "next/link";
 const VisionLivesOn = () => {
   return (
     <Parallax
-      bgImage="/assets/landing/bg1.webp"
+      bgImage="/assets/nes-assets/school.jpeg"
       bgImageAlt="Vision Lives On"
       bgImageStyle={{ filter: "sepia(0.7) brightness(0.7)" }}
       strength={500}
@@ -23,12 +23,13 @@ const VisionLivesOn = () => {
       >
         <h2 className="text-4xl md:text-5xl   mb-4">The Vision Lives On</h2>
         <p className="text-sm sm:text-xl mb-8">
-          CBS continues to uphold the values and principles of its founders,
-          adapting to modern educational needs while preserving its rich
-          heritage.
+          New Era School continues to uphold the values and principles of its
+          founder Dr. Saeed Ansari, adapting to modern educational needs while
+          preserving its rich heritage and mission to "Reach out and Help
+          Others."
         </p>
         <Link href="/contact-us" onClick={() => window.scrollTo(0, 0)}>
-          <Button size="lg">Discover CBS Today</Button>
+          <Button size="lg">Discover NES Today</Button>
         </Link>
       </motion.div>
     </Parallax>

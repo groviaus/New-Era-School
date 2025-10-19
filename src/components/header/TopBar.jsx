@@ -9,18 +9,18 @@ export default function TopBar() {
       <div className="sm:container md:max-w-6xl lg:max-w-[1400px] mx-auto flex flex-wrap justify-between items-center text-sm">
         <div className="hidden sm:flex items-center flex-wrap sm:space-x-4 mb-2 sm:mb-0">
           <a
-            href="mailto:principal@colbrownschool.com"
+            href="mailto:newera540@gmail.com"
             className="flex items-center mr-2 sm:mr-0 hover:text-yellow-400"
           >
             <Mail className="h-4 w-4 mr-2" />
-            principal@colbrownschool.com
+            newera540@gmail.com
           </a>
           <a
-            href="tel:+916395114363"
+            href="tel:+919958715277"
             className="flex items-center hover:text-yellow-400"
           >
             <Phone className="h-4 w-4 mr-2" />
-            Admission Helpline: +91 63951 14363
+            Admission Helpline: +91 99587 15277
           </a>
         </div>
         <div className="flex items-center justify-center sm:justify-start flex-wrap space-x-4">
