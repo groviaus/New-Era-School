@@ -62,7 +62,7 @@ const LegacyCBS = () => {
     <section className="overflow-hidden">
       <ImgAndBreadcrumb
         title="Legacy of NES"
-        imageSrc="/assets/nes-assets/school.jpeg"
+        imageSrc="/assets/nes-assets/gallery (1).jpeg"
         imageAlt="New Era School Campus"
         breadcrumbItems={breadcrumbItems}
       />
@@ -177,7 +177,13 @@ const FeatureItem = ({ feature, index, isExpanded, onToggle }) => (
           src={feature.img}
           alt={feature.title}
           fill
-          className="object-cover transition-all duration-300 hover:scale-110 -z-10"
+          className="object-cover blur-md w-full h-full relative transition-all duration-300 hover:scale-110 -z-10"
+        />
+        <Image
+          src={feature.img}
+          alt={feature.title}
+          fill
+          className="object-contain absolute top-0 left-0 w-full h-full transition-all duration-300 hover:scale-110 -z-10"
         />
       </div>
     </div>
