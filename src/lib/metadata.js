@@ -11,7 +11,7 @@ export function findMetadataByPath(path) {
     return {
       title: metadata.title,
       description: metadata.description,
-      canonical: `https://www.colbrownschool.com${metadata.canonical}`,
+      canonical: `https://www.neweraschool.com${metadata.canonical}`,
     };
   }
 
@@ -35,7 +35,7 @@ export function findMetadataByPath(path) {
           title: item.title,
           description: item.description,
           // For dynamic paths, prefer the actual resolved path for canonical
-          canonical: `https://www.colbrownschool.com${cleanPath}`,
+          canonical: `https://www.neweraschool.com${cleanPath}`,
         };
       }
     }
@@ -43,10 +43,11 @@ export function findMetadataByPath(path) {
 
   // If no exact match, return default metadata
   return {
-    title: "Best Boarding School In Dehradun For Boys | Residential School",
+    title:
+      "New Era School | Progressive English Medium School in Jamia Nagar, Delhi",
     description:
-      "Looking for a Boarding School For Boys In India? Col Brown School is a Top Boarding Schools in Dehradun, Uttarakhand, and specializes in boarding education!",
-    canonical: `https://www.colbrownschool.com${cleanPath}`,
+      "New Era School, established in 1968, is a recognized progressive English Medium School in Jamia Nagar, Delhi. Committed to value-based education and holistic development of students.",
+    canonical: `https://www.neweraschool.com${cleanPath}`,
   };
 }
 
@@ -57,7 +58,7 @@ export function generateMetadataForPath(path) {
     title: metadata.title,
     description: metadata.description,
     keywords:
-      "education, school, CBS, learning, boarding school, residential school, boys school, Dehradun schools, Col Brown School",
+      "New Era School, English Medium School, Jamia Nagar, Delhi, education, progressive school, value-based education, Dr Saeed Ansari, established 1968",
     robots: {
       index: true,
       follow: true,
@@ -69,15 +70,15 @@ export function generateMetadataForPath(path) {
         "max-snippet": -1,
       },
     },
-    authors: [{ name: "Col Brown School" }],
-    creator: "Col Brown School",
-    publisher: "Col Brown School",
+    authors: [{ name: "New Era School" }],
+    creator: "New Era School",
+    publisher: "New Era School",
     openGraph: {
       title: metadata.title,
       description: metadata.description,
       type: "website",
       url: metadata.canonical,
-      siteName: "Col Brown School",
+      siteName: "New Era School",
     },
     twitter: {
       card: "summary_large_image",

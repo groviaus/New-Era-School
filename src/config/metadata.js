@@ -1,9 +1,11 @@
 export const routeMetadata = {
   "/": {
-    title: "Best Boarding School In Dehradun For Boys | Residential School",
+    title:
+      "New Era School | Progressive English Medium School in Jamia Nagar, Delhi",
     description:
-      "Looking for a Boarding School For Boys In India? Col Brown School is a Top Boarding Schools in Dehradun, Uttarakhand, and specializes in boarding education!",
-    keywords: "education, school, CBS, learning",
+      "New Era School, established in 1968, is a recognized progressive English Medium School in Jamia Nagar, Delhi. Committed to value-based education and holistic development of students.",
+    keywords:
+      "New Era School, English Medium School, Jamia Nagar, Delhi, education, progressive school, value-based education",
   },
   "/about/legacy-of-cbs": {
     title: "Legacy of CBS | Shaping Future Leaders at Col Brown School",
