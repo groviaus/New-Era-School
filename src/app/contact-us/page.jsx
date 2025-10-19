@@ -221,7 +221,7 @@ const ContactSection = () => {
             <div className="w-full h-full group">
               <div className="relative h-full">
                 <img
-                  src="https://www.welhamboys.org/images/contact-banner.jpg"
+                  src="/assets/nes-assets/gallery (9).jpeg"
                   alt="ContactUs tailwind section"
                   className="object-cover w-full sm:h-full min-h-[550px] bg-green-700 lg:rounded-l-2xl brightness-50 rounded-2xl bg-blend-multiply"
                 />
@@ -235,14 +235,14 @@ const ContactSection = () => {
                         Email Enquiry
                       </h5>
                       <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=principal@colbrownschool.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=newera540@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center"
                       >
                         <Mail className="text-white min-w-5 sm:w-7 h-7" />
                         <h5 className="ml-5 text-sm sm:text-base font-normal leading-6 text-white">
-                          principal@colbrownschool.com
+                          newera540@gmail.com
                         </h5>
                       </a>
                     </div>
@@ -252,22 +252,22 @@ const ContactSection = () => {
                       </h5>
                       <div className="flex flex-wrap gap-2 sm:gap-0">
                         <a
-                          href="tel:+916395114363"
+                          href="tel:+919958715277"
                           className="flex items-center"
                         >
                           <Phone className="text-white min-w-5 sm:w-5 h-5" />
                           <h5 className="mx-2 mr-3 sm:ml-5 sm:mr-0 text-sm sm:text-base font-normal leading-6 text-white">
-                            +91 6395114363
+                            +91 99587 15277
                           </h5>
                         </a>
 
                         <a
-                          href="tel:+911352655233"
+                          href="tel:+919311396532"
                           className="flex items-center"
                         >
                           <Phone className="text-white block sm:hidden min-w-5 sm:w-5 h-5" />
                           <h5 className="ml-2 sm:ml-5 text-sm sm:text-base font-normal leading-6 text-white">
-                            +91 135 2655233
+                            +91 93113 96532
                           </h5>
                         </a>
                       </div>
@@ -277,14 +277,14 @@ const ContactSection = () => {
                         Location
                       </h5>
                       <a
-                        href="https://www.google.com/maps/place/Col.+Brown+Cambridge+School/@30.322328,78.056969,1446m/data=!3m1!1e3!4m6!3m5!1s0x390929b641fd13a5:0xf2f0dda3f2210a65!8m2!3d30.3223276!4d78.0569688!16s%2Fm%2F0bmjr27?hl=en&entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoJLDEwMjExMjM0SAFQAw%3D%3D"
+                        href="https://www.google.com/maps/search/261,+Jamia+Nagar+Noor+Nagar+Road.+New+Delhi-110025"
                         target="_blank"
                         className="flex"
                       >
                         <MapPin className="mt-1 text-white min-w-5 sm:w-7 h-7" />
                         <h5 className="ml-5 text-sm sm:text-base font-normal leading-6 text-white">
-                          5 Kasturba Road, Dalanwala Dehradun – 248 001
-                          Uttarakhand, India
+                          261, Jamia Nagar Noor Nagar Road. New Delhi-110025,
+                          India
                         </h5>
                       </a>
                     </div>
@@ -482,7 +482,7 @@ const ContactSection = () => {
           </h2>
           <div className="mt-5 overflow-hidden rounded-2xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d423612.82089899003!2d78.056969!3d30.322328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929b641fd13a5%3A0xf2f0dda3f2210a65!2sCol.%20Brown%20Cambridge%20School!5e1!3m2!1sen!2sus!4v1737722820602!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d429278.9435012999!2d77.287114!3d28.560215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce40aa4e81881%3A0xa74039bbbd3cd26!2sNEW%20ERA%20SCHOOL!5e1!3m2!1sen!2sus!4v1760868367011!5m2!1sen!2sus"
               width="100%"
               height="450"
               style={{ border: 0 }}
