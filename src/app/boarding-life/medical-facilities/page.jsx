@@ -87,7 +87,7 @@ const Feature = () => {
           <div className="aspect-[16/9] max-w-3xl mx-auto mb-20">
             <Image
               src="/assets/boarding-life/medifaci (2).webp"
-              alt="Medical facilities at Col. Brown School"
+              alt="Medical facilities at New Era School"
               width={600}
               height={400}
               className="w-full h-full object-cover rounded-xl"

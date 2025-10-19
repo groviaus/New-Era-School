@@ -34,7 +34,7 @@ const Drawer = () => {
             <ChevronRight className="h-4 w-4" />
           )}
         </CollapsibleTrigger>
-        <CollapsibleContent>
+        <CollapsibleContent className="bg-green-900 bg-opacity-90">
           <ul className="pl-4 space-y-1">
             {item.submenu.map((subItem, subIndex) => (
               <li key={subIndex}>
@@ -68,7 +68,7 @@ const Drawer = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="p-2 text-black rounded lg:hidden">
+        <button className="p-2  text-black rounded lg:hidden">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -84,10 +84,10 @@ const Drawer = () => {
           </svg>
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-green-900 bg-opacity-90  overflow-auto border-none">
+      <SheetContent className="bg-green-900  overflow-auto border-none">
         <SheetHeader>
           <SheetTitle className="text-white text-2xl font-bold text-left">
-            Col. Brown School
+            New Era School
           </SheetTitle>
           <SheetDescription className="text-white text-left pt-5">
             <nav>

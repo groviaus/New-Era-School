@@ -361,7 +361,7 @@ const features = [
     number: "e-Learning Platforms",
     title: "Global Learning Access",
     description:
-      "We provide access to e-learning tools, online resources, and educational portals that support self-paced learning and global collaboration, ensuring students stay ahead in a competitive world. At Col. Brown School, technology is not just a subject—it's a bridge to creativity, problem-solving, and global citizenship. We strive to ensure every student is equipped for a future driven by innovation.",
+      "We provide access to e-learning tools, online resources, and educational portals that support self-paced learning and global collaboration, ensuring students stay ahead in a competitive world. At New Era School, technology is not just a subject—it's a bridge to creativity, problem-solving, and global citizenship. We strive to ensure every student is equipped for a future driven by innovation.",
   },
 ];
 

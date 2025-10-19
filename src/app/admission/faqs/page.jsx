@@ -56,9 +56,9 @@ import {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What is the history of Col. Brown School?",
+      question: "What is the history of New Era School?",
       answer:
-        "Col. Brown School was founded in 1926 by Colonel William Brown and Mrs. Brown. It is one of the premier ICSE boarding schools in India, renowned for its holistic education and rich legacy.",
+        "New Era School was founded in 1926 by Colonel William Brown and Mrs. Brown. It is one of the premier ICSE boarding schools in India, renowned for its holistic education and rich legacy.",
     },
     {
       question: "What curriculum does the school follow?",

@@ -206,9 +206,9 @@ const Gallery = () => {
             Library Spaces
           </h2>
           <div className="w-full text-center text-gray-600 text-lg font-light leading-8">
-            The library at Col. Brown School is a space where students can
-            explore ideas, enhance their knowledge, and cultivate the skills
-            essential for success in academics and beyond.
+            The library at New Era School is a space where students can explore
+            ideas, enhance their knowledge, and cultivate the skills essential
+            for success in academics and beyond.
           </div>
         </div>
 

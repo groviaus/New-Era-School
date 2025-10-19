@@ -194,9 +194,9 @@ export const routeMetadata = {
     keywords: "sports, gallery, photos, CBS school",
   },
   "/notable-alumni": {
-    title: "Notable Alumni | Col. Brown School – Legacy of Excellence",
+    title: "Notable Alumni | New Era School – Legacy of Excellence",
     description:
-      "Discover the distinguished alumni of Col. Brown School, one of the top residential schools in India. Explore the success stories of leaders, professionals, and achievers who have shaped various fields.",
+      "Discover the distinguished alumni of New Era School, one of the top residential schools in India. Explore the success stories of leaders, professionals, and achievers who have shaped various fields.",
     keywords: "alumni, notable, achievements, CBS school",
   },
   "/newsletter": {

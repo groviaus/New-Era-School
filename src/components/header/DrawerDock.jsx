@@ -88,10 +88,10 @@ const DrawerDock = (props) => {
           </svg>
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-green-900 bg-opacity-90  overflow-auto border-none">
+      <SheetContent className="bg-green-900   overflow-auto border-none">
         <SheetHeader>
           <SheetTitle className="text-white text-2xl font-bold text-left">
-            Col. Brown School
+            New Era School
           </SheetTitle>
           <SheetDescription className="text-white text-left pt-5">
             <nav>
